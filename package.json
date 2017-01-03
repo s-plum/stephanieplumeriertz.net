@@ -1,0 +1,38 @@
+{
+  "name": "stephanieplumeriertz.net",
+  "version": "1.0.0",
+  "description": "Another year, another website overhaul.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s-plum/stephanieplumeriertz.net.git"
+  },
+  "author": "Stephanie Plumeri Ertz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s-plum/stephanieplumeriertz.net/issues"
+  },
+  "homepage": "https://github.com/s-plum/stephanieplumeriertz.net",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.1.1",
+    "postcss-loader": "^1.2.1",
+    "pug": "^2.0.0-beta6",
+    "sass-loader": "^4.1.1",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.0",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "serve-favicon": "^2.3.2"
+  }
+}
