@@ -3,19 +3,16 @@ html
 		link(rel="stylesheet", href="css/main.min.css")
 		title Stephanie Plumeri Ertz
 	body
-		a(href="#menu")
+		a#navlink(href="#menu") Menu
 
 		block content
-
-		footer(role="contentinfo")
 
 		nav(id="menu")
 			ul
 				li
-					a(href="/#plum") Code
+					a(href="/#code") Code
 				li
-					a(href="/#noms") Confections
+					a(href="/#confections") Confections
 				li
-					//- TODO: Link to download Resume
-					a(href="" download) Download Resume
+					a(href="/#contact") Contact
 		script(src="js/main.min.js")

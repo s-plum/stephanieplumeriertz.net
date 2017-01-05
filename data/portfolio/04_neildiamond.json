@@ -1,0 +1,20 @@
+{
+	"title": "Neil Diamond's Christmas Prayers",
+	"media": [
+		{
+			"type": "video",
+			"src": "/video/portfolio/neildiamond.mp4",
+			"caption": "Screen captures of the main interfaces for the Neil Diamond website"
+		}
+	],
+	"overview": "A simple experience with a powerful message, this site allows users to share their Christmas prayers and tributes to loved ones. The site is a visual show piece, using animated accents throughout to gather and display almost one thousand messages from individuals across the United States.",
+	"work": [
+		"UI development",
+		"UI design advisory",
+		"Deployment and server management"
+	],
+	"stack": [
+		"AngularJS (1.5)",
+		"Ruby on Rails"
+	]
+}

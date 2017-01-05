@@ -1,0 +1,24 @@
+{
+	"title": "Verizon Activations Manager",
+	"media": [
+		{
+			"type": "video",
+			"src": "/video/portfolio/verizon.mp4",
+			"caption": "Screen capture of the manager interface"
+		}
+	],
+	"overview": "Initially developed for text-to-win promotions in NFL stadiums, this system evolved over the course of a year to manage 10 different contest types at almost 200 Verizon-sponsored events. The application features a permission structure with eight different user levels, and a UI to support the specific workflows of each. In addition to standard CMS controls, the system also includes multiple game interface views developed for customer gameplay on large touch screens.",
+	"work": [
+		"UI development",
+		"UI design advisory",
+		"Feature scoping",
+		"Deployment and server management"
+	],
+	"stack": [
+		"AngularJS (1.5)",
+		"Angular Material Component Framework",
+		"WebSockets API",
+		"Ruby on Rails",
+		"Twilio SDK"
+	]
+}

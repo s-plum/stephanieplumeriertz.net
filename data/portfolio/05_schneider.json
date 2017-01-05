@@ -1,0 +1,23 @@
+{
+	"title": "Schneider Electric Proof of Concept",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/portfolio/schneider/preview.gif",
+			"caption": "Experience the Demo",
+			"link": "http://schneider.dev.geno.me/",
+			"alt": "Animated screencap of the opening of the experience"
+		}
+	],
+	"overview": "This proof of concept demonstrates how any device with a camera, a screen, and a web browser can become a remote control for seven screens across the wall of an experience space. This multi-screen experience was pitched to Schneider Electric as a way for them to demonstrate the company's global reach. In the demo, users can explore sample information points in two of the seven countries that would be included in the final experience.",
+	"work": [
+		"UI development",
+		"Server development"
+	],
+	"stack": [
+		"Socket.io",
+		"Node.js",
+		"Express",
+		"Redis"
+	]
+}

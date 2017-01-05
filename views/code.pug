@@ -1,0 +1,29 @@
+extends layout
+
+block content
+	h1= project.title
+	.preview
+		ul.preview-media
+			for media in project.media
+				li
+					if media.link
+						a(href=media.link,target="_blank")= media.caption 
+					else
+						div
+						if media.type == 'video'
+							video(src=media.src, autoplay=true)
+						else
+							img(src=media.src, alt=media.alt || media.caption)
+	.info
+		h2 Overview
+		p= project.overview
+
+		h2 Contributions
+		ul
+			each contribution in project.work
+				li= contribution
+
+		h2 Codestuffs
+		ul
+			each item in project.stack
+				li= item

@@ -1,6 +1,63 @@
 extends layout
 
 block content
-  section(id="intro")
-  section(id="plum")
-  section(id="noms")
+	div#plumnom(aria-hidden="true")
+	section#intro
+		h1 Stephanie Plumeri Ertz
+		ul
+			li UI Developer
+			li Baker of Noms
+			li Casual Economist
+
+	section#code
+		h2 Code
+		.content
+			del I make websites
+			del I make apps
+			del I make art
+			del I make things
+			span 
+				| I make things 
+				b for people
+				| .
+			a.cta(href="#code-gallery") See Portfolio
+
+	section#code-gallery
+		h2 Code Portfolio
+		ul.gallery-content
+			each project, index in data.portfolio
+				li
+					a(href="/code/" + index) 
+						img(src="/img/portfolio/" + index + "/thumb.jpg", alt="", aria-hidden="true")
+						span= project.title
+
+	section#confections
+		h2 Confections
+		.content
+			span Cooking is an art.
+			span Baking is a science.
+			span 
+				| What I do with chocolate is 
+				b mad science
+				| .
+			a.cta(href="#confections-gallery") See Noms
+
+	section#confections-gallery
+		h2 Noms Gallery
+		ul.gallery-content
+			each nom, index in data.noms
+				li
+					a(href="/noms/" + index)
+						img(src="/img/noms/" + index + "/thumb.jpg", alt="", aria-hidden="true")
+						span= nom.title	
+
+	section#contact
+		h2 Contact
+		.content
+			ul
+				li
+					a(href="") LinkedIn
+					a(href="") GitHub
+					a(href="") Twitter
+			p
+				| Certified Three Laws Safe

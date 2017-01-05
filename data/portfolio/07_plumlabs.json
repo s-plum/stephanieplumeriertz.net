@@ -1,0 +1,23 @@
+{
+	"title": "Plum Labs",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/portfolio/plumlabs/preview.jpg",
+			"caption": "Visit the lab",
+			"link": "plumlabs.plumertz.net",
+			"alt": "Screencap of the Plum Labs homepage"
+		}
+	],
+	"overview": "A compilation of assorted one-off experiments, presented in standard test tube format.",
+	"work": [
+		"UI design",
+		"UI development"
+	],
+	"stack": [
+		"HTML",
+		"CSS",
+		"JavaScript",
+		"Just a touch of insanity"
+	]
+}

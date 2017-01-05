@@ -1,0 +1,27 @@
+{
+	"title": "UI Training Materials",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/devtraining/preview.jpg",
+			"caption": "Visit \"Is this Website Broken?\"",
+			"link": "http://isthiswebsitebroken.com/",
+			"alt": "Screenshot of the Is This Website Broken website"
+		},
+		{
+			"type": "image",
+			"src": "/img/devtraining/respond.jpg",
+			"caption": "Visit \"Respond.\"",
+			"link": "http://ui.tmp.com/projects/respond/",
+			"alt": "Screenshot of the Respond training website"
+		}
+	],
+	"overview": "Sometimes I build things, and other times I build things to teach others about best practices for building things. \"Is This Website Broken\" was built to promote the importance of content accessibility, while \"Respond.\" was used as part of a series of presentations on the benefits and challenges of responsive design.",
+	"work": [
+		"UI development",
+		"Fanatic devotion to web standards"
+	],
+	"stack": [
+		"Good ol' HTML, CSS, and Javascript"
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"title": "Everything Is Awesome",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/portfolio/wedding/preview.gif",
+			"caption": "Visit the site",
+			"link": "http://everythingisawesomewedding.com/",
+			"alt": "Animated screencap of CSS 3D fun"
+		}
+	],
+	"overview": "Simple yet effective LEGO-themed website for my LEGO-themed wedding. Be sure to click the Google+ link.",
+	"work": [
+		"UI design/graphics",
+		"UI development",
+		"Server development"
+	],
+	"stack": [
+		"VanillaJS",
+		"Google Maps API",
+		"Node.js",
+		"Express"
+	]
+}
