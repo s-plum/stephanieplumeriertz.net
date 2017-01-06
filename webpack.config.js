@@ -1,4 +1,7 @@
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+var PROD = process.env.NODE_ENV === 'production';
 
 module.exports = {
 	entry: {
@@ -22,8 +25,17 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [ 
-		new ExtractTextPlugin('../css/[name].min.css')
+	plugins: 
+	PROD ? [
+		new webpack.optimize.UglifyJsPlugin({
+	      compress: { warnings: false }
+	    }),
+		new ExtractTextPlugin('../css/[name].min.css'),
+		new webpack.IgnorePlugin(/vertx/)
+	]
+	: [ 
+		new ExtractTextPlugin('../css/[name].min.css'),
+		new webpack.IgnorePlugin(/vertx/)
 	],
 	target: 'node'
 };

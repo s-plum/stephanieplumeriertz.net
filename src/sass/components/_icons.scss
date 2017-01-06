@@ -1,0 +1,36 @@
+.icon {
+	background: url("/img/icons.svg") no-repeat;
+	background-size: 400% auto;
+	display: inline-block;
+	height: 50px;
+	overflow: hidden;
+	text-align: left;
+	text-indent: -9999em;
+	width: 50px;
+
+	@media (min-width: $start-md) {
+		height: 100px;
+		width: 100px;
+	}
+
+	@media (min-width: $start-lg) {
+		height: 150px;
+		width: 150px;
+	}
+
+	&--github {
+		background-position: 0 center;
+	}
+
+	&--linkedin {
+		background-position: 33.333% center;
+	}
+
+	&--twitter {
+		background-position: 66.66667% center;
+	}
+
+	&--download {
+		background-position: right center;
+	}
+}

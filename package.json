@@ -4,7 +4,8 @@
   "description": "Another year, another website overhaul.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack --watch",
+    "build-prod": "NODE_ENV=production webpack",
     "start": "babel-node ./bin/www"
   },
   "repository": {
@@ -35,7 +36,9 @@
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.0",
+    "es6-promise": "^4.0.5",
     "express": "^4.14.0",
+    "fetch-ie8": "^1.4.3",
     "morgan": "^1.7.0",
     "promise": "^7.1.1",
     "serve-favicon": "^2.3.2"

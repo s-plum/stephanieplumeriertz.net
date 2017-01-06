@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1= nom.title
+	p= nom.overview
+
+	.preview
+		ul.preview-media
+			each media in nom.media
+				li
+					div
+						if media.type == 'video'
+							video(src=media.src, autoplay=true, loop=media.loop)
+						else
+							img(src=media.src, alt=media.alt || media.caption)

@@ -3,15 +3,15 @@ const router = express.Router();
 
 /* GET home page. */
 
-router.get('/:project', (req, res, next) => {
-	let project = req.app.locals.data.portfolio[req.params.project];
+router.get('/:nom', (req, res, next) => {
+	let nom = req.app.locals.data.noms[req.params.nom];
 
-	if (!project) {
+	if (!nom) {
 		res.redirect('/');
 	}
 	else {
-		res.locals.project = project;
-		res.render('code');
+		res.locals.nom = nom;
+		res.render('nom');
 	}
 });
 

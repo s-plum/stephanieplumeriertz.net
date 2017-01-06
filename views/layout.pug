@@ -1,11 +1,12 @@
 html
 	head
-		link(rel="stylesheet", href="css/main.min.css")
+		link(rel="stylesheet", href="/css/main.min.css")
 		title Stephanie Plumeri Ertz
 	body
 		a#navlink(href="#menu") Menu
 
-		block content
+		main#content
+			block content
 
 		nav(id="menu")
 			ul
@@ -15,4 +16,4 @@ html
 					a(href="/#confections") Confections
 				li
 					a(href="/#contact") Contact
-		script(src="js/main.min.js")
+		script(src="/js/main.min.js")

@@ -3,13 +3,14 @@
 	"media": [
 		{
 			"type": "image",
-			"src": "/img/noms/santassinkhole/1.jpg",
+			"src": "/img/noms/santasinkhole/1.jpg",
 			"caption": "The cake in all its glory."
 		},
 		{
 			"type": "video",
 			"src": "/video/noms/santasinkhole.mp4",
-			"caption": ""
+			"caption": "",
+			"loop": true
 		},
 		{
 			"type": "image",
