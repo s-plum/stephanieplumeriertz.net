@@ -1,3 +1,28 @@
+html, body {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	width: 100%;
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+	color: #000;
+	font: 300 16px / 1.25 $font-text;
+
+	&.menu-open {
+		overflow: hidden;
+	}
+}
+
+b, strong {
+	font-weight: 700;
+}
+
 img {
 	max-width: 100%;
 }
@@ -6,4 +31,8 @@ img {
 	margin: 0 auto;
 	max-width: 1200px;
 	width: 100%;
+}
+
+section {
+	@extend %fullscreen;
 }

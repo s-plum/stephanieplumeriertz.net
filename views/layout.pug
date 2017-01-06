@@ -1,15 +1,24 @@
-html
+html(lang="en")
 	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
 		link(rel="stylesheet", href="/css/main.min.css")
+		script.
+			document.getElementsByTagName('html')[0].className = 'js';
 		title Stephanie Plumeri Ertz
 	body
-		a#navlink(href="#menu") Menu
+		a#navlink(href="#menu") 
+			span 
+			b Menu
 
 		main#content
 			block content
 
 		nav(id="menu")
 			ul
+				li
+					a.logo(href="/#intro") 
+						span Home
 				li
 					a(href="/#code") Code
 				li

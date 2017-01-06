@@ -1,0 +1,290 @@
+@keyframes nav-bounce-top {
+	0% {
+		transform: translate3d(0, -8px, 0);
+	}
+	40% {
+		transform: translate3d(0, -5px, 0);
+	}
+	100% {
+		transform: translate3d(0, -8px, 0);
+	}
+}
+
+@keyframes nav-bounce-bottom {
+	0% {
+		transform: translate3d(0, 8px, 0);
+	}
+	40% {
+		transform: translate3d(0, 5px, 0);
+	}
+	100% {
+		transform: translate3d(0, 8px, 0);
+	}
+}
+
+@keyframes menu-open {
+	0% {
+		z-index: 2;
+		opacity: 0;
+	}
+	100% {
+		z-index: 2;
+		opacity: 1;
+	}
+}
+
+@keyframes menu-close {
+	0% {
+		z-index: 2;
+		opacity: 1;
+	}
+	100% {
+		z-index: -1;
+		opacity: 0;
+	}
+}
+
+@keyframes hop {
+	0% {
+		transform: translate3d(0,0,0);
+	}
+	10% {
+		transform: translate3d(0,1%,0);
+	}
+	50% {
+		transform: translate3d(0,-15%,0);
+	}
+	100% {
+		transform: translate3d(0,0,0);
+	}
+}
+
+#navlink {
+	background: rgba(#fff, 0.875);
+	padding: 20px 10px;
+	position: fixed;
+	right: 10px;
+	transition: background 200ms ease;
+	top: 10px;
+	z-index: 3;
+
+	b {
+		@extend %wai;
+	}
+
+	span {
+		background: $plum;
+		display: block;
+		height: 4px;
+		position: relative;
+		transition: all 200ms ease;
+		width: 25px;
+
+		&:before, &:after {
+			background: $plum;
+			content: "";
+			display: block;
+			height: 4px;
+			position: absolute;
+			transition: all 200ms ease;
+			width: 25px;
+		}
+
+		&:before {
+			transform: translate3d(0, -8px, 0);
+		}
+
+		&:after {
+			transform: translate3d(0, 8px, 0);
+		}
+	}
+
+	&:hover, &:focus {
+		background: #fff;
+
+		span {
+			&:before {
+				animation: nav-bounce-top 200ms ease-out;
+			}
+
+			&:after {
+				animation: nav-bounce-bottom 200ms ease-out;
+			}
+		}
+	}
+
+	.menu-open & {
+		background: none;
+
+		&:hover, &:focus {
+			background: none;
+		}
+
+		span {
+			transform: translate3d(0,0,0) rotate(45deg);
+			transition-delay: 100ms;
+
+			&:before {
+				transform: translate3d(0,0,0);
+			}
+
+			&:after {
+				transform: translate3d(0,0,0) rotate(-90deg);
+				transition-delay: 100ms;
+			}
+		}
+	}
+
+	.menu-closing & {
+		span {
+			&:before {
+				transform: translate3d(0,-8px,0);
+				transition-delay: 100ms;
+			}
+		}
+	}
+
+	.menu-open &, .menu-closing & {
+		&:hover, &:focus {
+			span {
+				&:before, &:after {
+					animation: none;
+				}
+			}
+		}
+	}
+}
+
+#menu {
+	@extend %fullscreen;
+	background: rgba(#fff, 0.875);
+	box-sizing: border-box;
+	height: 100vh;
+	z-index: 2;
+
+	ul {
+		align-items: center;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+
+		@media (min-height: 500px) {
+			height: calc(100% - 10px);
+			margin-top: -10px;
+		}
+	}
+
+	a {
+		color: $purple;
+		display: block;
+		font: 300 3em / 1 $font-accent;
+		padding: 20px 0;
+		position: relative;
+		text-decoration: none;
+		text-transform: lowercase;
+
+		@media (min-width: $start-md) {
+			font-size: 4em;
+			padding: 30px 0;
+		}
+
+		&:hover, &:focus {
+			outline: 0;
+		}
+
+		&:after {
+			background: $plum;
+			bottom: 10px;
+			content: "";
+			height: 2px;
+			left: 50%;
+			position: absolute;
+			transition: width 300ms ease;
+			transition-delay: 100ms;
+			transform: translate3d(-50%,0,0);
+			width: 0;
+
+			@media (min-width: $start-md) {
+				bottom: 20px;
+			}
+		}
+
+		&.logo {
+			height: 1.25em;
+			margin: 20px 0;
+			padding: 0;
+			width: 2.375em;
+
+			@media (min-width: $start-md) {
+				margin: 30px 0;
+			}
+
+			&:before, &:after {
+				background: url("/img/plumnom.svg") no-repeat;
+				background-size: auto 100%;
+				bottom: auto;
+				content: "";
+				height: 100%;
+				position: absolute;
+				top: 0;
+				transform: translate3d(0,0,0);
+				transition: all 400ms ease;
+				width: 50%;
+			}
+
+			&:before {
+				left: 0;
+			}
+
+			&:after {
+				background-position: right center;
+				left: auto;
+				right: 0;
+			}
+
+			&:hover, &:focus {
+				&:before {
+					animation: hop 250ms ease;
+				}
+
+				&:after {
+					animation: hop 250ms ease 100ms;
+				}
+			}
+
+			span {
+				@extend %wai;
+			}
+		}
+	}
+
+	.js & {
+		@extend %fill;
+		opacity: 0;
+		position: fixed;
+		transition: opacity 300ms ease;
+		z-index: -1;
+	}
+
+	.js .menu-open & {
+		animation: menu-open 300ms ease;
+		animation-fill-mode: forwards;
+
+		a:not(.logo) {
+			&:after {
+				width: 0;
+			}
+
+			&:hover, &:focus {
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.js .menu-closed & {
+		animation: menu-close 200ms ease;
+		animation-fill-mode: forwards;
+	}
+}

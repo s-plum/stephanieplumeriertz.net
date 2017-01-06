@@ -1,2 +1,42 @@
 $start-md: 600px;
 $start-lg: 900px;
+
+$font-text: 'Nunito Sans', sans-serif;
+$font-accent: 'Quicksand', sans-serif;
+
+$plum: #4b0062;
+$purple: #2f003d;
+
+%fill {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+%wai {
+	display: block;
+	height: 0;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	text-align: left;
+	text-indent: -9999em;
+	width: 0;
+}
+
+%fullscreen {
+	box-sizing: border-box;
+	height: 100vh;
+	padding: 20px;
+
+	@media (min-width: $start-md) {
+		padding: 30px;
+	}
+
+	@media (min-width: $start-lg) {
+		padding: 50px;
+	}
+}
