@@ -2,63 +2,72 @@ extends layout
 
 block content
 	div#plumnom(aria-hidden="true")
-	section#intro
-		h1 Stephanie Plumeri Ertz
-		ul
-			li UI Developer
-			li Baker of Noms
-			li Casual Economist
-
-	section#code
-		h2 Code
-		.content
-			del I make websites
-			del I make apps
-			del I make art
-			del I make things
-			span 
-				| I make things 
-				b for people
-				| .
-			a.cta(href="#code-gallery") See Portfolio
-
-	section#code-gallery
-		h2 Code Portfolio
-		ul.gallery-content
-			each project, index in data.portfolio
-				li
-					a(href="/code/" + index) 
-						img(src="/img/portfolio/" + index + "/thumb.jpg", alt="", aria-hidden="true")
-						span= project.title
-
-	section#confections
-		h2 Confections
-		.content
-			span Cooking is an art.
-			span Baking is a science.
-			span 
-				| What I do with chocolate is 
-				b mad science
-				| .
-			a.cta(href="#confections-gallery") See Noms
-
-	section#confections-gallery
-		h2 Noms Gallery
-		ul.gallery-content
-			each nom, index in data.noms
-				li
-					a(href="/noms/" + index)
-						img(src="/img/noms/" + index + "/thumb.jpg", alt="", aria-hidden="true")
-						span= nom.title	
-
-	section#contact
-		h2 Contact
-		.content
+		span.plum
+		span.nom
+	section#intro(tabindex="0")
+		.section-inner
+			h1 Stephanie <i>Plum</i>eri Ertz
 			ul
-				li
-					a.icon.icon--github(href="https://github.com/s-plum", target="_blank") GitHub
-					a.icon.icon--linkedin(href="https://www.linkedin.com/in/splum", target="_blank") LinkedIn
-					a.icon.icon--twitter(href="https://twitter.com/s_plum", target="_blank") Twitter
-					a.icon.icon--download(href="/pdf/stephanie_plumeri_ertz_resume.pdf", download) Download Resume
-			p
-				| Certified Three Laws Safe
+				li UI Developer
+				li Baker of Noms
+				li Casual Economist
+
+	section#code(tabindex="0")
+		.section-inner
+			h2 Code
+			.content
+				del I make websites
+				del I make apps
+				del I make art
+				del I make things
+				span 
+					| I make things 
+					b for people
+					| .
+				a.cta.gallery-cta(href="#code-gallery") See Portfolio
+
+	section#code-gallery.gallery-section
+		.section-inner.gallery-section-inner
+			h2 Code Portfolio
+			ul.gallery-content
+				each project, index in data.portfolio
+					li
+						a(href="/code/" + index) 
+							img(src="/img/portfolio/" + index + "/thumb.jpg", alt="", aria-hidden="true")
+							span= project.title
+
+	section#confections(tabindex="0")
+		.section-inner
+			h2 Confections
+			.content
+				span Cooking is an art.
+				span Baking is a science.
+				span 
+					| What I do with chocolate is 
+					b mad science
+					| .
+				a.cta.gallery-cta(href="#confections-gallery") See Noms
+
+	section#confections-gallery.gallery-section
+		.section-inner.gallery-section-inner
+			h2 Noms Gallery
+			ul.gallery-content
+				each nom, index in data.noms
+					li
+						a(href="/noms/" + index)
+							img(src="/img/noms/" + index + "/thumb.jpg", alt="", aria-hidden="true")
+							span= nom.title	
+
+
+	section#contact(tabindex="0")
+		.section-inner
+			h2 Contact
+			.content
+				ul
+					li
+						a.icon.icon--github(href="https://github.com/s-plum", target="_blank") GitHub
+						a.icon.icon--linkedin(href="https://www.linkedin.com/in/splum", target="_blank") LinkedIn
+						a.icon.icon--twitter(href="https://twitter.com/s_plum", target="_blank") Twitter
+						a.icon.icon--download(href="/pdf/stephanie_plumeri_ertz_resume.pdf", download) Download Resume
+				p
+					| Certified Three Laws Safe

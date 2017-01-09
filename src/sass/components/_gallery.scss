@@ -1,0 +1,60 @@
+.gallery-content {
+	a {
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+
+	.gallery-back-bottom {
+		@extend %wai;
+	}
+}
+
+.js {
+	.gallery-section-inner {
+		//display: none !important;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transform: translate3d(100%,0,0);
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.gallery-open #plumnom {
+		transform: translate3d(-100%,-50%,0);
+
+		&.page-code {
+			transform: translate3d(-100%,-200%,0);
+		}
+
+		&.page-confections {
+			transform: translate3d(100%,-200%,0) rotateY(180deg);
+		}
+	}
+
+	.overlay {
+		@extend %fullscreen;
+		background: #fff;
+		left: 0;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		position: fixed;
+		top: 0;
+		z-index: 10;
+	}
+}
+
+#code.gallery-open {
+	transform: translate3d(-100%,0,0);
+}
+
+#confections {
+	.gallery-section-inner {
+		transform: translate3d(-100%,0,0);
+	}
+
+	&.gallery-open {
+		transform: translate3d(100%,0,0);
+	}
+}

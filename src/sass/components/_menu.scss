@@ -24,18 +24,18 @@
 
 @keyframes menu-open {
 	0% {
-		z-index: 2;
+		z-index: 3;
 		opacity: 0;
 	}
 	100% {
-		z-index: 2;
+		z-index: 3;
 		opacity: 1;
 	}
 }
 
 @keyframes menu-close {
 	0% {
-		z-index: 2;
+		z-index: 3;
 		opacity: 1;
 	}
 	100% {
@@ -66,7 +66,12 @@
 	right: 10px;
 	transition: background 200ms ease;
 	top: 10px;
-	z-index: 3;
+	z-index: 4;
+
+	@media (min-width: $start-lg) {
+		right: 30px;
+		top: 30px;
+	}
 
 	b {
 		@extend %wai;
@@ -157,10 +162,10 @@
 
 #menu {
 	@extend %fullscreen;
-	background: rgba(#fff, 0.875);
+	background: rgba(#fff, 0.95);
 	box-sizing: border-box;
 	height: 100vh;
-	z-index: 2;
+	z-index: 3;
 
 	ul {
 		align-items: center;

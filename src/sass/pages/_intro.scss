@@ -1,0 +1,29 @@
+#intro .section-inner {
+	align-items: center;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	text-align: center;
+	text-transform: lowercase;
+
+	h1 {
+		font-size: 1.5em;
+		line-height: 1;
+		margin: 0 0 150px;
+
+		i {
+			color: $plum;
+			font-weight: 400;
+		}
+	}
+
+	ul {
+		li:not(:last-child):after {
+			color: $plum;
+			content: "\2022";
+			display: block;
+			font-size: 0.5em;
+			line-height: 2;
+		}
+	}
+}

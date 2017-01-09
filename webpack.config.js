@@ -1,5 +1,7 @@
 const webpack = require('webpack');
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 var PROD = process.env.NODE_ENV === 'production';
 
@@ -11,6 +13,11 @@ module.exports = {
 		path: './public/js',
 		filename: '[name].min.js'
 	},
+	resolve: {
+        root: [path.join(__dirname, "node_modules"), path.join(__dirname, "src/js")],
+        extensions: ['', '.js', '.coffee', '.html'],
+        modulesDirectories: ['node_modules']
+    },
 	devtool: 'source-map',
 	module: {
 		loaders: [
@@ -31,11 +38,13 @@ module.exports = {
 	      compress: { warnings: false }
 	    }),
 		new ExtractTextPlugin('../css/[name].min.css'),
-		new webpack.IgnorePlugin(/vertx/)
+		new webpack.IgnorePlugin(/vertx/),
+		new LiveReloadPlugin()
 	]
 	: [ 
 		new ExtractTextPlugin('../css/[name].min.css'),
-		new webpack.IgnorePlugin(/vertx/)
+		new webpack.IgnorePlugin(/vertx/),
+		new LiveReloadPlugin()
 	],
 	target: 'node'
 };

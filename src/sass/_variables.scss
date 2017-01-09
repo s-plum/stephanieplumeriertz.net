@@ -4,7 +4,7 @@ $start-lg: 900px;
 $font-text: 'Nunito Sans', sans-serif;
 $font-accent: 'Quicksand', sans-serif;
 
-$plum: #4b0062;
+$plum: #4c093c;
 $purple: #2f003d;
 
 %fill {
@@ -29,7 +29,8 @@ $purple: #2f003d;
 
 %fullscreen {
 	box-sizing: border-box;
-	height: 100vh;
+	height: 100%;
+	width: 100vw;
 	padding: 20px;
 
 	@media (min-width: $start-md) {
