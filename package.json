@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --watch",
     "build-prod": "NODE_ENV=production webpack",
-    "start": "babel-node ./bin/www"
+    "start": "babel-node ./bin/www",
+    "start-prod": "NODE_ENV=production babel-node ./bin/www"
   },
   "repository": {
     "type": "git",
