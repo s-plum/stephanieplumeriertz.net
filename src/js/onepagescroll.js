@@ -322,8 +322,8 @@ module.exports = function onePageScroll(element, options) {
   /*  Function to transform the page */
   /*---------------------------------*/
   
-  let _transformPage = function(el2, settings, pos, index, next_el) {
-    if (typeof settings.beforeMove == 'function') settings.beforeMove(index, next_el);
+  let _transformPage = function(el2, settings, pos, index, next_el, current_el) {
+    if (typeof settings.beforeMove == 'function') settings.beforeMove(index, next_el, current_el);
     
     var transformCSS = "-webkit-transform: translate3d(0, " + pos + "%, 0); -webkit-transition: -webkit-transform " + settings.animationTime + "ms " + settings.easing + "; -moz-transform: translate3d(0, " + pos + "%, 0); -moz-transition: -moz-transform " + settings.animationTime + "ms " + settings.easing + "; -ms-transform: translate3d(0, " + pos + "%, 0); -ms-transition: -ms-transform " + settings.animationTime + "ms " + settings.easing + "; transform: translate3d(0, " + pos + "%, 0); transition: transform " + settings.animationTime + "ms " + settings.easing + ";";
     
@@ -448,7 +448,7 @@ module.exports = function onePageScroll(element, options) {
 			var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (parseInt(index) + 1);
 			history.pushState( {}, document.title, href );
 		}
-		_transformPage(el3, settings, pos, next_index, next);
+		_transformPage(el3, settings, pos, next_index, next, current);
 	}
 	
 	/*---------------------------------*/
@@ -490,7 +490,7 @@ module.exports = function onePageScroll(element, options) {
 			var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (parseInt(index) - 1);
 			history.pushState( {}, document.title, href );
 		}
-		_transformPage(el4, settings, pos, next_index, next);
+		_transformPage(el4, settings, pos, next_index, next, current);
 	}
   
   /*-------------------------------------------*/
@@ -522,7 +522,7 @@ module.exports = function onePageScroll(element, options) {
 				var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (parseInt(page_index) - 1);
 				history.pushState( {}, document.title, href );
 			}
-			_transformPage(el5, settings, pos, page_index, next);
+			_transformPage(el5, settings, pos, page_index, next, current);
 		}
 	}
 	

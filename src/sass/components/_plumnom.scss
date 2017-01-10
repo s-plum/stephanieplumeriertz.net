@@ -24,6 +24,52 @@ $animationSpeed: 500ms;
 	}
 }
 
+@keyframes slide-cookie {
+	0% {
+		transform: translate3d(-50%,0,0) scale(1.5) rotateY(180deg);
+	}
+	100% {
+		transform: translate3d(-3.65em,0,0) scale(0.3) rotateY(180deg);
+	}
+}
+
+@keyframes slide-cookie-reverse {
+	0% {
+		transform: translate3d(-3.65em,0,0) scale(0.3) rotateY(180deg);
+	}
+	100% {
+		transform: translate3d(-50%,0,0) scale(1.5) rotateY(180deg);
+	}
+}
+
+@keyframes flip-plum {
+	0% {
+		transform: translate3d(-50%,0,0) scale(1.5);
+	}
+	1% {
+		transform: translate3d(-50%,0,0) scale(1.25) rotateY(180deg);
+		z-index: 1;
+	}
+	100% {
+		transform: translate3d(-0.1em,0,0) scale(0.3) rotateY(180deg);
+		z-index: 1;
+	}
+}
+
+@keyframes flip-plum-reverse {
+	0% {
+		transform: translate3d(-0.1em,0,0) scale(0.3) rotateY(180deg);
+		z-index: 1;
+	}
+	99% {
+		transform: translate3d(-50%,0,0) scale(1.25) rotateY(180deg);
+		z-index: 1;
+	}
+	100% {
+		transform: translate3d(-50%,0,0) scale(1.5);
+	}
+}
+
 #plumnom {
 	@extend %fill;
 	transform-style: preserve-3d;
@@ -88,17 +134,38 @@ $animationSpeed: 500ms;
 		}
 
 		.nom {
-			//transform: translate3d(-50%,-50%,0) scale(1.5) rotateY(180deg);
 			animation: show-plum $animationSpeed ease;
 			animation-fill-mode: forwards;
 		}
 
+		&.from-page-contact {
+			.nom {
+				animation: slide-cookie-reverse $animationSpeed ease forwards;
+			}
+
+			.plum {
+				animation: flip-plum-reverse $animationSpeed ease;
+			}
+		}
+	}
+
+	&.page-contact {
+		transform: translate3d(0,-102%,0) rotateY(180deg);
+
+		.plum {
+			animation: flip-plum $animationSpeed ease forwards;
+			z-index: 1;
+		}
+
+		.nom {
+			animation: slide-cookie $animationSpeed ease forwards;
+			z-index: 2;
+		}
 	}
 
 	&.page-intro {
 		.nom {
-			animation: show-plum-reverse $animationSpeed ease;
-			animation-fill-mode: forwards;
+			animation: show-plum-reverse $animationSpeed ease forwards;
 		}
 	}
 }

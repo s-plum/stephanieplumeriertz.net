@@ -66,6 +66,12 @@ section {
 
 .section-inner {
 	@extend %fullscreen;
+	&:not(.gallery-section-inner) {
+		align-items: center;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+	}
 }
 
 .fade-in {

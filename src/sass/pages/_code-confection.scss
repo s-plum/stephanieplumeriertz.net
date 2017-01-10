@@ -1,10 +1,5 @@
 #code .section-inner, #confections .section-inner {
 	&:not(.gallery-section-inner) {
-		align-items: center;
-		display: flex;
-		flex-flow: column;
-		justify-content: center;
-
 		h2 {
 			margin-top: 100px;
 		}
@@ -22,7 +17,11 @@
 
 		del, span {
 			display: block;
-			line-height: 1.5;
+			text-align: center;
+
+			&:not(:last-of-type) {
+				margin-bottom: 0.5em;
+			}
 		}
 
 		b {
@@ -36,7 +35,7 @@
 			color: #fff;
 			display: block;
 			font: 300 1.125em $font-accent;
-			margin-top: 0.5em;
+			margin-top: 0.75em;
 			padding: 0.5em 0.75em;
 			text-decoration: none;
 			text-transform: lowercase;
@@ -49,5 +48,11 @@
 				transform: translate3d(-1px,-1px,0);
 			}
 		}
+	}
+}
+
+#confections .section-inner:not(.gallery-section-inner) {
+	h2 {
+		margin-top: 50px;
 	}
 }

@@ -11,9 +11,12 @@ if (plumnom) {
 //change classes on scroll
 onePageScroll('#content', {
 	animationTime: 500,
-	beforeMove: (index, nextEl) => {
+	beforeMove: (index, nextEl, prevEl) => {
 		if (nextEl) {
 			plumnom.className = 'page-' + nextEl.id;
+		}
+		if (prevEl) {
+			plumnom.className += ' from-page-' + prevEl.id;
 		}
 	},
 	pagination: false
