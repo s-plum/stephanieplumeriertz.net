@@ -121,8 +121,14 @@ $animationSpeed: 500ms;
 
 		.nom {
 			//transform: translate3d(-50%,-50%,0) scale(1.5) rotateY(180deg);
-			animation: show-plum $animationSpeed ease;
-			animation-fill-mode: forwards;
+			animation: show-plum $animationSpeed ease forwards;
+		}
+
+		&.from-page-confections {
+			.nom {
+				animation: none;
+				transform: translate3d(-50%,0,0) scale(1.5) rotateY(180deg);
+			}
 		}
 	}
 
@@ -144,7 +150,7 @@ $animationSpeed: 500ms;
 			}
 
 			.plum {
-				animation: flip-plum-reverse $animationSpeed ease;
+				animation: flip-plum-reverse $animationSpeed ease forwards;
 			}
 		}
 	}
