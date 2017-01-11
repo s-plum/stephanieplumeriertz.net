@@ -1,105 +1,53 @@
 $animationSpeed: 500ms;
 
-@keyframes show-plum {
-	0% {
-		transform: translate3d(5%,0,0);
-	}
-	99% {
-		transform: translate3d(-50%,0,0);
-	}
-	100% {
-		transform: translate3d(-50%,0,0) scale(1.5) rotateY(180deg);
-	}
-}
-
-@keyframes show-plum-reverse {
-	0% {
-		transform: translate3d(-50%,0,0) scale(1.5) rotateY(180deg);
-	}
-	1% {
-		transform: translate3d(-50%,0,0);
-	}
-	100% {
-		transform: translate3d(5%,0,0);
-	}
-}
-
-@keyframes slide-cookie {
-	0% {
-		transform: translate3d(-50%,0,0) scale(1.5) rotateY(180deg);
-	}
-	100% {
-		transform: translate3d(-3.65em,0,0) scale(0.3) rotateY(180deg);
-	}
-}
-
-@keyframes slide-cookie-reverse {
-	0% {
-		transform: translate3d(-3.65em,0,0) scale(0.3) rotateY(180deg);
-	}
-	100% {
-		transform: translate3d(-50%,0,0) scale(1.5) rotateY(180deg);
-	}
-}
-
-@keyframes flip-plum {
-	0% {
-		transform: translate3d(-50%,0,0) scale(1.5);
-	}
-	1% {
-		transform: translate3d(-50%,0,0) scale(1.25) rotateY(180deg);
-		z-index: 1;
-	}
-	100% {
-		transform: translate3d(-0.1em,0,0) scale(0.3) rotateY(180deg);
-		z-index: 1;
-	}
-}
-
-@keyframes flip-plum-reverse {
-	0% {
-		transform: translate3d(-0.1em,0,0) scale(0.3) rotateY(180deg);
-		z-index: 1;
-	}
-	99% {
-		transform: translate3d(-50%,0,0) scale(1.25) rotateY(180deg);
-		z-index: 1;
-	}
-	100% {
-		transform: translate3d(-50%,0,0) scale(1.5);
-	}
-}
-
 #plumnom {
 	@extend %fill;
+	backface-visibility: hidden;
 	transform-style: preserve-3d;
+	perspective: 1000px;
 	transition: all $animationSpeed ease;
 	z-index: 1;
 
 	.plum, .nom {
 		backface-visibility: hidden;
-		background: url("/img/plumnom.svg") no-repeat;
-		background-size: auto 100%;
 		content: "";
 		height: 80px;
 		position: absolute;
 		left: 50%;
 		//margin-top: -32px;
-		transition: all $animationSpeed ease;
+		perspective: 1000px;
+		transform-style: preserve-3d;
+		transform: rotateY(0) translate3d(0,0,0);
 		//top: 50%;
 		width: 75px;
 	}
 
+	.plumnom-inner {
+		@extend %fill;
+		backface-visibility: hidden;
+		background: url("/img/plumnom.svg") no-repeat;
+		background-size: auto 100%;
+		transition: all $animationSpeed ease;
+		transform-style: preserve-3d;
+		perspective: 1000px;
+	}
+
 	.plum {
-		background-position: left center;
-		transform: translate3d(-105%,0,0);
 		z-index: 2;
+
+		.plumnom-inner {
+			background-position: left center;
+			transform: translate3d(-105%,0,0) scale(1);
+		}
 	}
 
 	.nom {
-		background-position: right center;
-		transform: translate3d(5%,0,0);
 		z-index: 1;
+
+		.plumnom-inner {
+			background-position: right center;
+			transform: translate3d(5%,0,0) scale(1);
+		}
 	}
 }
 
@@ -110,24 +58,62 @@ $animationSpeed: 500ms;
 	margin-top: -34px;
 	top: 50%;
 	transform: translate3d(0,-50%,0);
-	z-index: 2;
+	z-index: 3;
 
-	&.page-code {
-		transform: translate3d(0,-200%,0);
-
+	&.page-intro {
 		.plum {
-			transform: translate3d(-50%,0,0) scale(1.5);
+			z-index: 2;
 		}
 
 		.nom {
-			//transform: translate3d(-50%,-50%,0) scale(1.5) rotateY(180deg);
-			animation: show-plum $animationSpeed ease forwards;
+			z-index: 1;
 		}
 
-		&.from-page-confections {
+		&.from-page-code.animating {
+			.nom .plumnom-inner {
+				transform: translate3d(-75%,0,0) scale(1);
+				transition: none;
+			}
+		}
+
+		&.from-page-code.animating.animation-progress {
+			.nom .plumnom-inner {
+				transform: translate3d(5%,0,0) scale(1);
+				transition: all $animationSpeed ease;
+			}
+		}
+	}
+
+	&.page-code {
+		transform: translate3d(0,-200%,0) rotateY(0);
+
+		.plum .plumnom-inner {
+			transform: translate3d(-50%,0,0) scale(1.5);
+		}
+
+		&.animating {
+			.nom .plumnom-inner {
+				transform: translate3d(-50%,0,0) scale(1);
+			}
+		}
+
+		&:not(.animating) {
 			.nom {
-				animation: none;
-				transform: translate3d(-50%,0,0) scale(1.5) rotateY(180deg);
+				transform: rotateY(180deg);
+
+				.plumnom-inner {
+					transform: translate3d(50%,0,0) scale(1.5);
+				}
+			}
+		}
+
+		&.from-page-confections.animating {
+			.nom {
+				transform: rotateY(180deg);
+
+				.plumnom-inner {
+					transform: translate3d(50%,0,0) scale(1.5);
+				}
 			}
 		}
 	}
@@ -136,42 +122,99 @@ $animationSpeed: 500ms;
 		transform: translate3d(0,-200%,0) rotateY(180deg);
 
 		.plum {
-			transform: translate3d(-50%,0,0) scale(1.5);
+			z-index: 1;
+
+			.plumnom-inner {
+				transform: translate3d(-50%,0,0) scale(1.5);
+			}
 		}
 
 		.nom {
-			animation: show-plum $animationSpeed ease;
-			animation-fill-mode: forwards;
+			z-index: 2;
+			transform: rotateY(180deg) translate3d(0,0,1px);
+
+			.plumnom-inner {
+				transform: translate3d(50%,0,0) scale(1.5);
+			}
 		}
 
-		&.from-page-contact {
-			.nom {
-				animation: slide-cookie-reverse $animationSpeed ease forwards;
+		&.from-page-contact.animating {
+			.plum {
+				transform: rotateY(180deg);
+				z-index: 1;
+
+				.plumnom-inner {
+					transform: translate3d(50%,0,0) scale(1.2);
+
+					@media (min-width: $start-lg) {
+						transform: translate3d(50%,0,0) scale(1.2);
+					}
+				}
 			}
 
-			.plum {
-				animation: flip-plum-reverse $animationSpeed ease forwards;
+			.nom {
+				z-index: 2;
 			}
 		}
 	}
 
 	&.page-contact {
-		transform: translate3d(0,-102%,0) rotateY(180deg);
+		transform: translate3d(0,-104%,0) rotateY(180deg);
+
+		@media (min-width: $start-md) {
+			transform: translate3d(0,-128%,0) rotateY(180deg);
+		}
+
+		@media (min-width: $start-lg) {
+			transform: translate3d(0,-164%,0) rotateY(180deg);
+		}
 
 		.plum {
-			animation: flip-plum $animationSpeed ease forwards;
+			transform: rotateY(180deg);
 			z-index: 1;
+
+			.plumnom-inner {
+				transform: translate3d(-3.5em,0,0) scale(0.3);
+
+				@media (min-width: $start-lg) {
+					transform: translate3d(-6em,-2px,0) scale(0.4);
+				}
+			}
 		}
 
 		.nom {
-			animation: slide-cookie $animationSpeed ease forwards;
+			transform: rotateY(180deg) translate3d(0,0,1px);
 			z-index: 2;
-		}
-	}
 
-	&.page-intro {
-		.nom {
-			animation: show-plum-reverse $animationSpeed ease forwards;
+			.plumnom-inner {
+				transform: translate3d(8em,0,0) scale(0.3);
+
+				@media (min-width: $start-lg) {
+					transform: translate3d(10.25em,0,0) scale(0.4);
+				}
+			}
+		}
+
+		&.from-page-confections.animating {
+			.plum .plumnom-inner {
+				transform: translate3d(50%,0,0) scale(1);
+				transition: none;
+
+				@media (min-width: $start-lg) {
+					transform: translate3d(50%,0,0) scale(1);
+				}
+			}
+		}
+
+		&.from-page-confections.animating.animation-progress {
+			.plum .plumnom-inner {
+				transform: translate3d(-3.5em,0,0) scale(0.3);
+				transition: all $animationSpeed ease;
+
+				@media (min-width: $start-lg) {
+					transform: translate3d(-6em,-2px,0) scale(0.4);
+				}
+			}
 		}
 	}
 }

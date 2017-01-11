@@ -85,27 +85,41 @@ module.exports = function onePageScroll(element, options) {
     
   	if(window.location.hash != "" && window.location.hash != "#1") {
   		var init_index =  window.location.hash.replace("#", ""),
-  		    next = document.querySelector(settings.sectionContainer + "[data-index='" + (init_index) + "']"),
-  		    next_index = next.dataset.index;
-    
-  		_addClass( document.querySelector(settings.sectionContainer + "[data-index='" + init_index + "']") ,"active")
-  		_addClass(body, "viewing-page-"+ init_index)
-  		if(settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a" + "[data-index='" + init_index + "']"), "active");
-    
-  		if(next) {
-  			_addClass(next, "active")
-  			if(settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a" + "[data-index='" + init_index + "']"), "active");
-    
-  			body.className = body.className.replace(/\bviewing-page-\d.*?\b/g, '');
-  			_addClass(body, "viewing-page-" + next_index)
-  			if (history.replaceState && settings.updateURL == true) {
-  				var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (init_index);
-  				history.pushState( {}, document.title, href );
+  			next,
+  			next_index;
+
+  		//try to find container by ID
+  		if (isNaN(parseInt(init_index))) {
+  			for (var i=0; i < sections.length; i++) {
+  				if (sections[i].id === init_index) {
+  					init_index = i+1;
+  					break;
+  				}
   			}
   		}
-  		var pos = ((init_index - 1) * 100) * -1;
-  		_transformPage(el, settings, pos, init_index);
-    
+
+  		if (init_index) {
+  			next = document.querySelector(settings.sectionContainer + "[data-index='" + (init_index) + "']"),
+  		    next_index = next.dataset.index;
+  		    _addClass( document.querySelector(settings.sectionContainer + "[data-index='" + init_index + "']") ,"active")
+	  		_addClass(body, "viewing-page-"+ init_index)
+	  		if(settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a" + "[data-index='" + init_index + "']"), "active");
+	    
+	  		if(next) {
+	  			_addClass(next, "active")
+	  			if(settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a" + "[data-index='" + init_index + "']"), "active");
+	    
+	  			body.className = body.className.replace(/\bviewing-page-\d.*?\b/g, '');
+	  			_addClass(body, "viewing-page-" + next_index)
+	  			if (history.replaceState && settings.updateURL == true) {
+	  				var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (init_index);
+	  				history.pushState( {}, document.title, href );
+	  			}
+	  		}
+	  		var pos = ((init_index - 1) * 100) * -1;
+	  		_transformPage(el, settings, pos, init_index, sections[init_index - 1]);
+  		}
+  		  
   	}else{
   	  _addClass(document.querySelector(settings.sectionContainer + "[data-index='1']"), "active");
   	  _addClass(body, "viewing-page-1");
@@ -130,7 +144,9 @@ module.exports = function onePageScroll(element, options) {
   		if (!_hasClass(body, "disabled-onepage-scroll")) {
   			event.preventDefault();
   			var delta = event.wheelDelta || -event.detail;
-  			_init_scroll(event, delta);
+  			if (Math.abs(delta) > 10) {
+  				_init_scroll(event, delta);
+  			}
   		}
   	}
     
@@ -184,6 +200,14 @@ module.exports = function onePageScroll(element, options) {
 				el.style.display='';
 			}
   		});
+
+  		//target any menu links
+  		if (f.hasAttribute('data-onepagescroll-index')) {
+  			f.addEventListener('click', e => {
+  				e.preventDefault();
+  				moveTo(el, f.getAttribute('data-onepagescroll-index'));
+  			});
+  		}
 	});
 
   	return false;

@@ -31,6 +31,10 @@
 		margin-top: 1.25em;
 		text-align: center;
 
+		@media (min-width: $start-lg) {
+			margin-top: 3em;
+		}
+
 		a {
 			color: #000;
 			display: inline-block;
@@ -50,10 +54,6 @@
 				transition-delay: 100ms;
 				transform: translate3d(-50%,0,0);
 				width: 0;
-
-				@media (min-width: $start-md) {
-					bottom: 20px;
-				}
 			}
 
 			&:hover, &:focus {

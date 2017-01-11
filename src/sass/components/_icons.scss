@@ -19,18 +19,22 @@
 	}
 
 	&--github {
+		background-color: #000;
 		background-position: 0 center;
 	}
 
 	&--linkedin {
+		background-color: #007bb6;
 		background-position: 33.333% center;
 	}
 
 	&--twitter {
+		background-color: #429cd6;
 		background-position: 66.66667% center;
 	}
 
 	&--download {
+		background-color: #b39bca;
 		background-position: right center;
 	}
 }

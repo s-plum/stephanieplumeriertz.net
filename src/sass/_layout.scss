@@ -30,6 +30,15 @@ h2 {
 	margin-bottom: 0.5em;
 	text-align: center;
 	text-transform: lowercase;
+
+	@media (min-width: $start-lg) {
+		font-size: 3.5em;
+	}
+}
+
+sup {
+	vertical-align: super;
+    font-size: smaller;
 }
 
 b, strong {
@@ -51,6 +60,8 @@ img {
 	//transform: translate3d(-50%,0,0);
 	// scroll-snap-points-y: repeat(100%);
 	// scroll-snap-type: mandatory;
+	transform: translate3d(0,0,0);
+	backface-visibility: hidden;
 	width: 100%;
 	z-index: 2;
 	-webkit-transform-style: preserve-3d;

@@ -8,25 +8,42 @@ if (plumnom) {
 	document.body.appendChild(plumnom);
 }
 
+const setAnimationClass = (index, nextEl, prevEl) => {
+	if (prevEl && nextEl.id == prevEl.id) {
+		return false;
+	}
+
+	if (nextEl && !plumnom.classList.contains('page-' + nextEl.id)) {
+		plumnom.className = 'page-' + nextEl.id;
+	}
+
+	plumnom.classList.add('animating');
+
+	if (prevEl && !plumnom.classList.contains('from-page-' + prevEl.id)) {
+		plumnom.className += ' from-page-' + prevEl.id;
+	}
+
+	setTimeout(() => {
+		plumnom.classList.add('animation-progress');
+	}, 50);
+
+	setTimeout(() => {
+		plumnom.classList.remove('animation-progress','animating');
+	}, 501);
+};
+
 //change classes on scroll
 onePageScroll('#content', {
 	animationTime: 500,
-	beforeMove: (index, nextEl, prevEl) => {
-		if (nextEl) {
-			plumnom.className = 'page-' + nextEl.id;
-		}
-		if (prevEl) {
-			plumnom.className += ' from-page-' + prevEl.id;
-		}
-	},
+	beforeMove: setAnimationClass,
 	pagination: false
 });
 
 //update menu links to change pages with onePageScroll
 const menuLinks = Array.prototype.slice.call(document.querySelectorAll('#menu a'));
 
-menuLinks.forEach(m => {
-
+menuLinks.forEach((m, i) => {
+	m.setAttribute('data-onepagescroll-index', i+1);
 });
 
 // //triggers for animation - top and bottom of each section
