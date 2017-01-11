@@ -1,0 +1,21 @@
+#code-gallery {
+	background: $plum;
+
+	h2 {
+		color: #fff;
+	}
+
+	.gallery-back {
+		background: rgba(#fff,0.875);
+		color: $plum;
+
+		b {
+			font-weight: 400;
+		}
+
+		&:hover, &:focus {
+			background: #fff;
+			box-shadow: 3px 3px 0 0 rgba(0,0,0,0.4);
+		}
+	}
+}

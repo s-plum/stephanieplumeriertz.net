@@ -53,7 +53,7 @@ const hideAllGalleries = () => {
 const getBackButton = (elem, isBottom) => {
 	let backButton = document.createElement('button');
 	backButton.className = 'gallery-back';
-	backButton.innerHTML = 'Back to main page';
+	backButton.innerHTML = '<b>Back</b><span> to main page</span>';
 	backButton.type = 'button';
 	backButton.addEventListener('click', () => {
 		hideGallery(elem);

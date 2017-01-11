@@ -35,8 +35,9 @@ block content
 				each project, index in data.portfolio
 					li
 						a(href="/code/" + index) 
-							img(src="/img/portfolio/" + index + "/thumb.jpg", alt="", aria-hidden="true")
-							span= project.title
+							.gallery-content-inner
+								span.gallery-content-image(style="background-image:url('/img/portfolio/" + index + "/thumb.jpg')")
+								span.gallery-content-label= project.title
 
 	section#confections(tabindex="0")
 		.section-inner
@@ -57,8 +58,9 @@ block content
 				each nom, index in data.noms
 					li
 						a(href="/noms/" + index)
-							img(src="/img/noms/" + index + "/thumb.jpg", alt="", aria-hidden="true")
-							span= nom.title	
+							.gallery-content-inner
+								span.gallery-content-image(style="background-image:url('/img/noms/" + index + "/thumb.jpg')")
+								span.gallery-content-label= nom.title	
 
 
 	section#contact(tabindex="0")

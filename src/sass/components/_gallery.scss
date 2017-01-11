@@ -1,12 +1,117 @@
+@keyframes breathe {
+	0% {
+		border-width: 10px 18px;
+	}
+	50% {
+		border-width: 16px 18px;
+	}
+	100% {
+		border-width: 10px 18px;
+	}
+}
+
 .gallery-content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1500px;
+	width: 100%;
+
+	@media (min-width: 800px) and (max-width: 1200px) {
+		justify-content: flex-start;
+	}
+
+	li {
+		background: #fff;
+		margin-bottom: 10px;
+		width: 100%;
+
+		@media (min-width: 450px) {
+			width: calc(50% - 5px);
+		}
+
+		@media (min-width: 800px) {
+			width: calc(33.33333% - 7px);
+		}
+
+		@media (min-width: 800px) and (max-width: 1200px) {
+			&:nth-child(3n+1), &:nth-child(1), &:nth-child(3n+2), &:nth-child(2) {
+				margin-right: 10px;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			width: calc(25% - 8px);
+		}
+	}
+
 	a {
+		background: #fff;
+		color: #000;
+		display: block;
+		position: relative;
+		text-decoration: none;
+		transition: all 200ms ease;
+		width: 100%;
+		z-index: 1;
+
 		&:hover, &:focus {
+			box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.3);
+			outline: 0;
+			transform: scale(1.1);
 			text-decoration: none;
+			z-index: 2;
+		}
+
+		.gallery-content-inner {
+			padding: 10px;
+			transform: translate3d(0,0,0);
+		}
+
+		.gallery-content-image {
+			background-size: cover;
+			display: block;
+			margin-bottom: 10px;
+
+			&:before {
+				content: "";
+				display: block;
+				padding-bottom: 61.8033%;
+				width: 100%;
+			}
+		}
+
+		.gallery-content-label {
+			display: block;
+			font-size: 0.875em;
+			line-height: 1.1;
 		}
 	}
 
 	.gallery-back-bottom {
 		@extend %wai;
+	}
+}
+
+.gallery-section-inner {
+	h2 {
+		font-size: 2em;
+		margin: 1em 0;
+	}
+
+	@media (min-width: 1200px) and (min-height: 700px) {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+
+		h2, .gallery-content {
+			flex: 0 0 auto;
+		}
+
+		h2 {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -30,6 +135,36 @@
 
 		&.page-confections {
 			transform: translate3d(100%,-200%,0) rotateY(180deg);
+		}
+	}
+
+	.gallery-back {
+		&:not(.gallery-back-bottom) {
+			@extend %button;
+			font-size: 0.875em;
+			left: 15px;
+			letter-spacing: 0.02em;
+			position: absolute;
+			top: 15px;
+			transform: translate3d(0,0,0);
+			padding: 0.25em 0.75em;
+
+			@media (min-width: $start-lg) {
+				left: 25px;
+				top: 30px;
+			}
+
+			b {
+				font-weight: 300;
+			}
+
+			span {
+				@extend %wai;
+			}
+		}
+
+		&-bottom {
+			@extend %wai;
 		}
 	}
 
