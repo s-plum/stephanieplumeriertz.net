@@ -33,18 +33,20 @@ const setAnimationClass = (index, nextEl, prevEl) => {
 };
 
 //change classes on scroll
-onePageScroll('#content', {
-	animationTime: 500,
-	beforeMove: setAnimationClass,
-	pagination: false
-});
+if (document.body.classList.contains('page-index')) {
+	onePageScroll('#content', {
+		animationTime: 500,
+		beforeMove: setAnimationClass,
+		pagination: false
+	});
 
-//update menu links to change pages with onePageScroll
-const menuLinks = Array.prototype.slice.call(document.querySelectorAll('#menu a'));
+	//update menu links to change pages with onePageScroll
+	const menuLinks = Array.prototype.slice.call(document.querySelectorAll('#menu a'));
 
-menuLinks.forEach((m, i) => {
-	m.setAttribute('data-onepagescroll-index', i+1);
-});
+	menuLinks.forEach((m, i) => {
+		m.setAttribute('data-onepagescroll-index', i+1);
+	});
+}
 
 // //triggers for animation - top and bottom of each section
 // let sectionHeight = 0;

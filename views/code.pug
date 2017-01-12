@@ -1,29 +1,41 @@
 extends layout
 
 block content
-	h1= project.title
-	.preview
-		ul.preview-media
-			for media in project.media
-				li
-					if media.link
-						a(href=media.link,target="_blank")= media.caption 
-					else
-						div
-						if media.type == 'video'
-							video(src=media.src, autoplay=true)
-						else
-							img(src=media.src, alt=media.alt || media.caption)
-	.info
-		h2 Overview
-		p= project.overview
+	.gallery-detail.gallery-detail--code
+		.gallery-detail-inner
+			h1= project.title
+			.gallery-detail-content
+				.preview
+					ul.preview-media
+						for media in project.media
+							li
+								if media.type == 'image'
+									if media.link
+										a.preview-media-item(href=media.link,target="_blank")
+											img(src=media.src, alt=media.alt || media.caption)
+											span.preview-media-caption
+												.text= media.caption
+									else
+										span.preview-media-item
+											img(src=media.src, alt=media.alt || media.caption)
 
-		h2 Contributions
-		ul
-			each contribution in project.work
-				li= contribution
+								else
+									.preview-media-item
+										video(src=media.src, autoplay=true)
+										
+				.info
+					.info-section
+						h2 Overview
+						p= project.overview
 
-		h2 Codestuffs
-		ul
-			each item in project.stack
-				li= item
+					.info-section
+						h2 Contributions
+						ul
+							each contribution in project.work
+								li= contribution
+
+					.info-section
+						h2 Codestuffs
+						ul
+							each item in project.stack
+								li= item

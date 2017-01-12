@@ -71,6 +71,7 @@
 
 		.gallery-content-image {
 			background-size: cover;
+			background-position: center;
 			display: block;
 			margin-bottom: 10px;
 
@@ -163,20 +164,40 @@
 			}
 		}
 
+		&.gallery-close {
+			left: auto;
+			right: 15px;
+
+			@media (min-width: $start-md) {
+				top: 25px;
+				right: 25px;
+			}
+
+			// @media (min-width: $start-lg) {
+			// 	right: 50px;
+			// }
+		}
+
 		&-bottom {
 			@extend %wai;
 		}
 	}
 
 	.overlay {
-		@extend %fullscreen;
+		@extend %fill;
 		background: #fff;
 		left: 0;
 		overflow: auto;
 		-webkit-overflow-scrolling: touch;
 		position: fixed;
 		top: 0;
-		z-index: 10;
+		z-index: 11;
+
+		.gallery-detail {
+			height: auto;
+			min-height: 100vh;
+			overflow: hidden;
+		}
 	}
 }
 

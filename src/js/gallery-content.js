@@ -154,7 +154,7 @@ const showContent = text => {
 		var closeButton = document.createElement('button');
 		closeButton.setAttribute('type','button');
 		closeButton.innerHTML = 'Close';
-		closeButton.className = 'close';
+		closeButton.className = 'gallery-close gallery-back';
 		closeButton.addEventListener('click', closeContent);
 
 		overlay.appendChild(closeButton);

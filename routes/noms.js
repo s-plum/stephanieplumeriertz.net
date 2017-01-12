@@ -11,6 +11,7 @@ router.get('/:nom', (req, res, next) => {
 	}
 	else {
 		res.locals.nom = nom;
+		res.locals.page = 'nom';
 		res.render('nom');
 	}
 });

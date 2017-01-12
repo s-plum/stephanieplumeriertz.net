@@ -1,3 +1,20 @@
 #confections-gallery {
-	background: rgba(#d3a65a, 0.7);
+	background: rgba(#d3a65a, 0.8);
+
+	h2 {
+		color: #4e3413;
+	}
+
+	.gallery-back {
+		background: darken(#4e3413, 5%);
+		color: #fff;
+
+		b {
+			font-weight: 400;
+		}
+
+		&:hover, &:focus {
+			background: darken(#4e3413, 10%);
+		}
+	}
 }

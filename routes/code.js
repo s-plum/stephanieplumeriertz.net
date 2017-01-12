@@ -11,6 +11,7 @@ router.get('/:project', (req, res, next) => {
 	}
 	else {
 		res.locals.project = project;
+		res.locals.page = 'code';
 		res.render('code');
 	}
 });

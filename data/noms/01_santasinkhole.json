@@ -2,11 +2,6 @@
 	"title": "Santa's Sinkhole",
 	"media": [
 		{
-			"type": "image",
-			"src": "/img/noms/santasinkhole/1.jpg",
-			"caption": "The cake in all its glory."
-		},
-		{
 			"type": "video",
 			"src": "/video/noms/santasinkhole.mp4",
 			"caption": "",
@@ -21,7 +16,13 @@
 			"type": "image",
 			"src": "/img/noms/santasinkhole/3.jpg",
 			"caption": "The first slice."
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/santasinkhole/1.jpg",
+			"caption": "The cake in all its glory."
 		}
+		
 	],
 	"overview": "Six alternating layers of red-dyed chocolate and green-dyed white cake, carved out and stuffed with chocolate chip cookies and M&M's. Frosted and filled with vanilla buttercream, and topped with a layer of precision-aligned M&M's and an entire gingerbread house."
 }

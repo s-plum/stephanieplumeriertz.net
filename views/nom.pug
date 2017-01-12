@@ -1,15 +1,19 @@
 extends layout
 
 block content
-	h1= nom.title
-	p= nom.overview
+	.gallery-detail.gallery-detail--nom
+		.gallery-detail-inner
+			h1= nom.title
 
-	.preview
-		ul.preview-media
-			each media in nom.media
-				li
-					div
-						if media.type == 'video'
-							video(src=media.src, autoplay=true, loop=media.loop)
-						else
-							img(src=media.src, alt=media.alt || media.caption)
+			.gallery-detail-content
+				.preview
+					ul.preview-media
+						each media in nom.media
+							li
+								.preview-media-item
+									if media.type == 'video'
+										video(src=media.src, autoplay=true, loop=media.loop)
+									else
+										img(src=media.src, alt=media.alt || media.caption)
+
+				p.info= nom.overview
