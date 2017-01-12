@@ -8,6 +8,7 @@ const openMenu = () => {
 };
 
 const closeMenu = () => {
+	addMenuHoverLock();
 	document.body.classList.remove('menu-open', 'disabled-onepage-scroll');
 	document.body.classList.add('menu-closed', 'menu-closing');
 	setTimeout(() => {
@@ -25,7 +26,24 @@ const toggleMenu = e => {
 	}
 };
 
+const addMenuHoverLock = () => {
+	navLink.classList.add('no-hover-animation');
+	navLink.addEventListener('blur', removeMenuHoverLock);
+	navLink.addEventListener('mouseleave', removeMenuHoverLock);
+};
+
+const removeMenuHoverLock = () => {
+	navLink.removeEventListener('blur', removeMenuHoverLock);
+	navLink.removeEventListener('mouseleave', removeMenuHoverLock);
+	navLink.blur();
+
+	setTimeout(() => {
+		navLink.classList.remove('no-hover-animation');
+	}, 300);
+};
+
 navLink.addEventListener('click', toggleMenu);
+
 menuLinks.forEach(link => {
 	link.addEventListener('click', closeMenu);
 });

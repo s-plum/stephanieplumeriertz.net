@@ -6,7 +6,7 @@
 	}
 
 	.gallery-back {
-		background: darken(#4e3413, 5%);
+		background: $chocolate;
 		color: #fff;
 
 		b {
@@ -14,7 +14,7 @@
 		}
 
 		&:hover, &:focus {
-			background: darken(#4e3413, 10%);
+			background: darken($chocolate, 10%);
 		}
 	}
 }

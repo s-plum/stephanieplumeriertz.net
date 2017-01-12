@@ -61,6 +61,7 @@
 
 #navlink {
 	background: rgba(#fff, 0.875);
+	border-radius: 2px;
 	padding: 20px 10px;
 	position: fixed;
 	right: 10px;
@@ -104,16 +105,18 @@
 		}
 	}
 
-	&:hover, &:focus {
-		background: #fff;
+	&:not(.no-hover-animation) {
+		&:hover, &:focus {
+			background: #fff;
 
-		span {
-			&:before {
-				animation: nav-bounce-top 200ms ease-out;
-			}
+			span {
+				&:before {
+					animation: nav-bounce-top 200ms ease-out;
+				}
 
-			&:after {
-				animation: nav-bounce-bottom 200ms ease-out;
+				&:after {
+					animation: nav-bounce-bottom 200ms ease-out;
+				}
 			}
 		}
 	}

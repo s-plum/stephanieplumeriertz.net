@@ -198,7 +198,32 @@
 			min-height: 100vh;
 			overflow: hidden;
 		}
+
+		&:hover, &:focus {
+			outline: 0;
+		}
 	}
+}
+
+.gallery-open .overlay {
+	border-width: 10px;
+	border-style: solid;
+
+	@media (min-width: $start-md) {
+		border-width: 20px;
+	}
+
+	@media (min-width: $start-lg) {
+		border-width: 30px;
+	}
+}
+
+.gallery-open--code .overlay {
+	border-color: $plum;
+}
+
+.gallery-open--confections .overlay {
+	border-color: $nom;
 }
 
 #code.gallery-open {

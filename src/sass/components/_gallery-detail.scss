@@ -2,6 +2,7 @@
 	@extend %fullscreen;
 	overflow: auto;
 	position: relative;
+	width: 100%;
 
 	&:before {
 		border-radius: 100%;
@@ -28,12 +29,12 @@
 		font-size: 1.75em;
 		flex: 0 0 auto;
 		line-height: 1;
-		margin: 1.5em 0 1em;
+		margin: 1em 0;
 		width: 100%;
 
 		@media (min-width: $start-md) {
 			font-size: 2em;
-			margin: 1em 0;
+			margin: 0.5em 0 1em;
 		}
 	}
 
@@ -94,7 +95,7 @@
 
 				&:before {
 					background: $plum;
-					border-radius: 5px;
+					border-radius: 10px;
 					content: "";
 					height: 5px;
 					left: 0.25em;
@@ -197,18 +198,17 @@
 }
 
 .gallery-detail.gallery-detail--code {
-	background: $plum;
-	color: #fff;
-
-	h1, h2 {
-		color: rgba(#fff, 0.875);
-	}
+	background: rgba(65, 22, 55, 0.18);
 
 	// &:before {
 	// 	background: #fff;
 	// 	box-shadow: 0 0 0 50px $plum, 0 0 0 100px #fff, 0 0 0 150px $plum, 0 0 0 200px #fff;
 	// 	opacity: 0.05;
 	// }
+
+	h1 {
+		color: $plum;
+	}
 
 	.gallery-detail-content {
 		@media (min-width: $start-md) {
@@ -231,24 +231,10 @@
 			margin-bottom: 10px;
 		}
 	}
-
-	& +.gallery-back {
-		background: rgba(#fff,0.875);
-		color: $plum;
-
-		&:hover, &:focus {
-			background: #fff;
-			box-shadow: 3px 3px 0 0 rgba(0,0,0,0.4);
-		}
-	}
-
-	.info ul li:before {
-		background: #fff;
-	}
 }
 
 .gallery-detail.gallery-detail--nom {
-	background: rgba(#d3a65a, 0.8);
+	background: rgba($nom, 0.3);
 	// &:before {
 	// 	background: #d3a65a;
 	// 	box-shadow: 0 0 0 50px #fff, 0 0 0 100px rgba(#d3a65a, 0.5), 0 0 0 150px #fff, 0 0 0 200px rgba(#d3a65a, 0.25);
@@ -256,7 +242,7 @@
 	// }
 
 	h1, h2 {
-		color: #4e3413;
+		color: $chocolate;
 	}
 
 	.gallery-detail-content {
@@ -268,7 +254,7 @@
 			margin: 0 0 2em;
 
 			ul li:before {
-				background: #4e3413;
+				background: $chocolate;
 			}
 		}
 
@@ -304,21 +290,17 @@
 	}
 
 	& + .gallery-back {
-		background: darken(#4e3413, 5%);
+		background: $chocolate;
 		color: #fff;
 
 		&:hover, &:focus {
-			background: darken(#4e3413, 10%);
+			background: darken($chocolate, 5%);
 		}
 	}
 
 	.preview-media {
 		li {
 			width: 100%;
-
-			// @media (min-width: $start-lg) {
-			// 	width: calc(50% - 5px);
-			// }
 		}
 	}
 }

@@ -24,7 +24,7 @@ Display gallery content on CTA click
 const galleryCta = Array.prototype.slice.call(document.querySelectorAll('.gallery-cta'));
 
 const showGallery = elem => {
-	document.body.classList.add('gallery-open', 'disabled-onepage-scroll');
+	document.body.classList.add('gallery-open', 'disabled-onepage-scroll', 'gallery-open--' + elem.galleryData.parentSection.id);
 	elem.galleryData.parentSection.classList.add('gallery-open');
 	elem.galleryData.focusables.forEach(f => {
 		f.setAttribute('tabindex', '0');
@@ -36,7 +36,7 @@ const showGallery = elem => {
 };
 
 const hideGallery = elem => {
-	document.body.classList.remove('gallery-open', 'disabled-onepage-scroll');
+	document.body.classList.remove('gallery-open', 'disabled-onepage-scroll', 'gallery-open--code', 'gallery-open--confections');
 	elem.galleryData.parentSection.classList.remove('gallery-open');
 	elem.galleryData.targetGallery.setAttribute('tabindex', '-1');
 	elem.galleryData.focusables.forEach(f => {
@@ -148,6 +148,7 @@ const showContent = text => {
 	if (content) {
 		var overlay = document.createElement('div');
 		overlay.className = 'overlay';
+		overlay.setAttribute('tabindex','0');
 		overlay.innerHTML = content.innerHTML;
 		document.body.appendChild(overlay);
 
@@ -159,6 +160,7 @@ const showContent = text => {
 
 		overlay.appendChild(closeButton);
 		overlay.classList.add('fade-in');
+		overlay.focus();
 	}
 };
 
