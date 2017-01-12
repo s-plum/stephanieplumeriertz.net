@@ -1,4 +1,10 @@
 $animationSpeed: 500ms;
+$icon-height: 80px;
+$icon-width: 75px;
+$icon-height-md: 110px;
+$icon-width-md: 100px;
+$icon-height-lg: 160px;
+$icon-width-lg: 150px;
 
 #plumnom {
 	@extend %fill;
@@ -11,15 +17,24 @@ $animationSpeed: 500ms;
 	.plum, .nom {
 		backface-visibility: hidden;
 		content: "";
-		height: 80px;
+		height: $icon-height;
 		position: absolute;
 		left: 50%;
-		//margin-top: -32px;
 		perspective: 1000px;
 		transform-style: preserve-3d;
 		transform: rotateY(0) translate3d(0,0,0);
-		//top: 50%;
-		width: 75px;
+		transition: width $animationSpeed ease, height $animationSpeed ease;
+		width: $icon-width;
+
+		@media (min-width: $start-md) {
+			height: $icon-height-md;
+			width: $icon-width-md;
+		}
+
+		@media (min-width: $start-lg) {
+			height: $icon-height-lg;
+			width: $icon-width-lg;
+		}
 	}
 
 	.plumnom-inner {
@@ -53,14 +68,25 @@ $animationSpeed: 500ms;
 
 .js #plumnom {
 	bottom: auto;
-	height: 80px;
+	height: $icon-height;
 	position: fixed;
 	margin-top: -34px;
 	top: 50%;
 	transform: translate3d(0,-50%,0);
 	z-index: 3;
 
+	@media (min-width: $start-md) {
+		height: $icon-height-md;
+	}
+
+	@media (min-width: $start-lg) {
+		height: $icon-height-lg;
+	}
+
 	&.page-intro {
+		@media (min-width: $start-lg) {
+			margin-top: 0;
+		}
 		.plum {
 			z-index: 2;
 		}
@@ -70,39 +96,68 @@ $animationSpeed: 500ms;
 		}
 
 		&.from-page-code.animating {
-			.nom .plumnom-inner {
-				transform: translate3d(-75%,0,0) scale(1);
-				transition: none;
+			.nom {
+				height: $icon-height;
+				width: $icon-width;
+
+				@media (min-width: $start-md) {
+					height: $icon-height-md;
+					width: $icon-width-md;
+				}
+
+				@media (min-width: $start-lg) {
+					height: $icon-height-lg;
+					width: $icon-width-lg;
+				}
+
+				.plumnom-inner {
+					transform: translate3d(-50%,0,0);
+					transition: none;
+				}
 			}
 		}
 
 		&.from-page-code.animating.animation-progress {
 			.nom .plumnom-inner {
-				transform: translate3d(5%,0,0) scale(1);
+				transform: translate3d(5%,0,0);
 				transition: all $animationSpeed ease;
 			}
 		}
 	}
 
 	&.page-code {
+		height: $icon-height;
+		margin-top: -54px;
 		transform: translate3d(0,-200%,0) rotateY(0);
 
-		.plum .plumnom-inner {
-			transform: translate3d(-50%,0,0) scale(1.5);
+		.plum {
+			height: $icon-height*1.5;
+			width: $icon-width*1.5;
+
+			.plumnom-inner {
+				transform: translate3d(-50%,0,0);
+			}
 		}
 
 		&.animating {
-			.nom .plumnom-inner {
-				transform: translate3d(-50%,0,0) scale(1);
+			.nom {
+				height: $icon-height;
+				width: $icon-width;
+
+				.plumnom-inner {
+					transform: translate3d(-50%,20%,0);
+				}
 			}
 		}
 
 		&:not(.animating) {
 			.nom {
 				transform: rotateY(180deg);
+				height: $icon-height*1.5;
+				width: $icon-width*1.5;
 
 				.plumnom-inner {
-					transform: translate3d(50%,0,0) scale(1.5);
+					transform: translate3d(50%,0,0);
 				}
 			}
 		}
@@ -110,31 +165,39 @@ $animationSpeed: 500ms;
 		&.from-page-confections.animating {
 			.nom {
 				transform: rotateY(180deg);
+				height: $icon-height*1.5;
+				width: $icon-width*1.5;
 
 				.plumnom-inner {
-					transform: translate3d(50%,0,0) scale(1.5);
+					transform: translate3d(50%,0,0);
 				}
 			}
 		}
 	}
 
 	&.page-confections {
+		height: $icon-height;
+		margin-top: -54px;
 		transform: translate3d(0,-200%,0) rotateY(180deg);
 
 		.plum {
 			z-index: 1;
+			height: $icon-height*1.5;
+			width: $icon-width*1.5;
 
 			.plumnom-inner {
-				transform: translate3d(-50%,0,0) scale(1.5);
+				transform: translate3d(-50%,0,0);
 			}
 		}
 
 		.nom {
 			z-index: 2;
 			transform: rotateY(180deg) translate3d(0,0,1px);
+			height: $icon-height*1.5;
+			width: $icon-width*1.5;
 
 			.plumnom-inner {
-				transform: translate3d(50%,0,0) scale(1.5);
+				transform: translate3d(50%,0,0);
 			}
 		}
 
@@ -142,12 +205,14 @@ $animationSpeed: 500ms;
 			.plum {
 				transform: rotateY(180deg);
 				z-index: 1;
+				height: 1.2*$icon-height;
+				width: 1.2*$icon-width;
 
 				.plumnom-inner {
-					transform: translate3d(50%,0,0) scale(1.2);
+					transform: translate3d(50%,10%,0);
 
 					@media (min-width: $start-lg) {
-						transform: translate3d(50%,0,0) scale(1.2);
+						transform: translate3d(50%,10%,0);
 					}
 				}
 			}
@@ -159,6 +224,7 @@ $animationSpeed: 500ms;
 	}
 
 	&.page-contact {
+		height: $icon-height;
 		transform: translate3d(0,-104%,0) rotateY(180deg);
 
 		@media (min-width: $start-md) {
@@ -167,6 +233,11 @@ $animationSpeed: 500ms;
 
 		@media (min-width: $start-lg) {
 			transform: translate3d(0,-164%,0) rotateY(180deg);
+		}
+
+		.plum, .nom {
+			height: $icon-height;
+			width: $icon-width;
 		}
 
 		.plum {

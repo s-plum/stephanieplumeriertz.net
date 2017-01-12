@@ -266,6 +266,10 @@
 		.info {
 			order: 1;
 			margin: 0 0 2em;
+
+			ul li:before {
+				background: #4e3413;
+			}
 		}
 
 		.preview {
