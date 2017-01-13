@@ -117,17 +117,17 @@
 			margin-bottom: 10px;
 			width: 100%;
 
-			@media (min-width: 500px) {
-				width: calc(50% - 5px);
+			// @media (min-width: 500px) {
+			// 	width: calc(50% - 5px);
 
-				&:nth-child(1) {
-					width: 100%;
-				}
-			}
+			// 	&:nth-child(1) {
+			// 		width: 100%;
+			// 	}
+			// }
 
-			@media (min-width: 750px) {
-				width: 100%;
-			}
+			// @media (min-width: 750px) {
+			// 	width: 100%;
+			// }
 		}
 
 		.preview-media-item {

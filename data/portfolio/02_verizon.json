@@ -4,7 +4,19 @@
 		{
 			"type": "video",
 			"src": "/video/portfolio/verizon.mp4",
-			"caption": "Screen capture of the manager interface"
+			"caption": "Screen capture of the manager interface",
+			"poster": "/img/portfolio/poster1.png"
+		},
+		{
+			"type": "image",
+			"src": "/img/portfolio/verizon/2.png",
+			"caption": "Screenshots of the event creation workflow on small and large screens."
+		},
+		{
+			"type": "video",
+			"src": "/video/portfolio/verizon2.mp4",
+			"caption": "Screen capture of a touch screen game interface.",
+			"poster": "/img/portfolio/poster2.png"
 		}
 	],
 	"overview": "Initially developed for text-to-win promotions in NFL stadiums, this system evolved over the course of a year to manage 10 different contest types at almost 200 Verizon-sponsored events. The application features a permission structure with eight different user levels, and a UI to support the specific workflows of each. In addition to standard CMS controls, the system also includes multiple game interface views developed for customer gameplay on large touch screens.",
