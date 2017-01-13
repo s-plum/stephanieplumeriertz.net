@@ -1,12 +1,12 @@
 extends layout
 
 block content
-	div#plumnom.page-intro(aria-hidden="true")
-		span.plum
-			span.plumnom-inner
-		span.nom
-			span.plumnom-inner
 	section#intro(tabindex="0")
+		div#plumnom.page-intro(aria-hidden="true")
+			span.plum
+				span.plumnom-inner
+			span.nom
+				span.plumnom-inner
 		.section-inner
 			h1 Stephanie <i>Plum</i>eri Ertz
 			ul
@@ -59,7 +59,7 @@ block content
 					li
 						a(href="/noms/" + index)
 							.gallery-content-inner
-								span.gallery-content-image(style="background-image:url('/img/noms/" + index + "/thumb.png')")
+								span.gallery-content-image(style="background-image:url('/img/noms/" + index + "/thumb.jpg')")
 								span.gallery-content-label= nom.title	
 
 

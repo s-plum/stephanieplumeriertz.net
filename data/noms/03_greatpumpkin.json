@@ -1,0 +1,33 @@
+{
+	"title": "The Great Pumpkin",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/noms/greatpumpkin/1.jpg",
+			"caption": "Close-up of the top of the cake."
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/greatpumpkin/2.jpg",
+			"caption": "The full cake, with banana for scale."
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/greatpumpkin/3.jpg",
+			"caption": "Assorted cake ingredients."
+		},
+		{
+			"type": "video",
+			"src": "/video/noms/greatpumpkin.mp4",
+			"caption": "",
+			"loop": true,
+			"autoplay": true
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/greatpumpkin/5.jpg",
+			"caption": "The first slice of the cake."
+		}
+	],
+	"overview": "Three layers of pumpkin spice everything: Pumpkin spice Pop-Tarts baked into pumpkin brownies, pumpkin pie baked into pumpkin cake, and pumpkin cheesecake brownies, filled and frosted with pumpkin frosting. Garnished with pumpkin spice Hershey Kisses, pumpkin spice baking chips, and a Rice Krispie stem."
+}

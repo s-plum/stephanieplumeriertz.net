@@ -1,0 +1,20 @@
+{
+	"title": "Inception Brownies",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/noms/inception/1.jpg",
+			"caption": "View of Final Form Inception Brownies."
+		},
+		{
+			"type": "video",
+			"src": "/video/noms/inception1.mp4",
+			"caption": "",
+			"loop": false,
+			"autoplay": false,
+			"controls": true,
+			"poster": "/img/noms/inception/poster.jpg"
+		}
+	],
+	"overview": "Original Form: Peanut butter, spread inside Oreos, baked into chocolate chip cookies, baked into Funfetti brownies with Reese's Pieces. <br/><br/>Final Form: Frosted marble cupcakes, baked into funfetti cake, sandwiched between two layers of Original Form brownies, filled and topped with Nutella, and garnished with sprinkles."
+}

@@ -22,8 +22,9 @@ $icon-width-lg: 150px;
 		left: 50%;
 		perspective: 1000px;
 		transform-style: preserve-3d;
-		transform: rotateY(0) translate3d(0,0,0);
+		transform: rotateY(0) translate3d(0,-50%,0);
 		transition: width $animationSpeed ease, height $animationSpeed ease;
+		top: 50%;
 		width: $icon-width;
 
 		@media (min-width: $start-md) {
@@ -81,6 +82,11 @@ $icon-width-lg: 150px;
 
 	@media (min-width: $start-lg) {
 		height: $icon-height-lg;
+	}
+
+	.plum, .nom {
+		top: 0;
+		transform: rotateY(0) translate3d(0,0,0);
 	}
 
 	&.page-intro {

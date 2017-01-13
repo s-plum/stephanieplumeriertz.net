@@ -12,8 +12,9 @@ block content
 							li
 								.preview-media-item
 									if media.type == 'video'
-										video(src=media.src, autoplay=true, loop=media.loop)
+										video(src=media.src, autoplay=media.autoplay, loop=media.loop, controls=media.controls, poster=media.poster)
 									else
 										img(src=media.src, alt=media.alt || media.caption)
 
-				p.info= nom.overview
+				.info
+					| !{nom.overview}

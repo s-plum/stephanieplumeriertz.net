@@ -1,0 +1,21 @@
+{
+	"title": "Coin Block Cake",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/noms/coinblock/1.jpg",
+			"caption": "View of the entire cake."
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/coinblock/2.jpg",
+			"caption": "Unfrosted cake in progress."
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/coinblock/3.jpg",
+			"caption": "Finished cake with coins spilling out from the inside."
+		}
+	],
+	"overview": "Moist yellow cake with vanilla buttercream frosting, filled with chocolate coins and styled with fondant as an iconic Mario coin block."
+}

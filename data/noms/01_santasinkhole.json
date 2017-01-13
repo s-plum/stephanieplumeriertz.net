@@ -5,7 +5,8 @@
 			"type": "video",
 			"src": "/video/noms/santasinkhole.mp4",
 			"caption": "",
-			"loop": true
+			"loop": true,
+			"autoplay": true
 		},
 		{
 			"type": "image",

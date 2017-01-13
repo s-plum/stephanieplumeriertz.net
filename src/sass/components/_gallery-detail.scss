@@ -51,6 +51,7 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
+		align-items: flex-start;
 		letter-spacing: 0.02em;
 		margin-top: -1.5em;
 
@@ -248,6 +249,7 @@
 	.gallery-detail-content {
 		display: flex;
 		flex-flow: column;
+		align-items: flex-start;
 
 		.info {
 			order: 1;
