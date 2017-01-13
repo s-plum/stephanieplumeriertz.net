@@ -132,6 +132,7 @@
 
 		.preview-media-item {
 			background: #fff;
+			display: block;
 			position: relative;
 			padding: 10px;
 			transition: all 200ms ease;
@@ -213,6 +214,7 @@
 
 	.gallery-detail-content {
 		@media (min-width: $start-md) {
+			align-items: flex-start;
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: space-between;
@@ -228,7 +230,7 @@
 			width: calc(60% - 20px);
 		}
 
-		img, video {
+		a img, a video {
 			margin-bottom: 10px;
 		}
 	}
@@ -268,6 +270,7 @@
 		@media (min-width: $start-md) {
 			flex-flow: row wrap;
 			justify-content: space-between;
+			align-items: flex-start;
 
 			.info {
 				order: 2;
