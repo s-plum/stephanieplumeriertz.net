@@ -83,6 +83,31 @@
 					}
 				}
 			}
+
+			a {
+				color: #000;
+				display: inline-block;
+				position: relative;
+				text-decoration: none;
+
+				&:after {
+					background: #000;
+					bottom: 0;
+					content: "";
+					height: 1px;
+					left: 50%;
+					position: absolute;
+					transition: width 300ms ease;
+					transform: translate3d(-50%,0,0);
+					width: 0;
+				}
+
+				&:hover, &:focus {
+					&:after {
+						width: 100%;
+					}
+				}
+			}
 		}
 
 		ul {
@@ -172,7 +197,7 @@
 			font-family: $font-accent;
 			font-weight: 400;
 			text-align: right;
-			text-transform: lowercase;
+			//text-transform: lowercase;
 			transition: all 200ms ease;
 
 			// &:before {

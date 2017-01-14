@@ -63,12 +63,16 @@ module.exports = function onePageScroll(element, options) {
     
   	_swipeEvents(el);
   	document.addEventListener("swipeDown",  function(event){
-  	  if (!_hasClass(body, "disabled-onepage-scroll")) event.preventDefault();
-  		moveUp(el);
+  	  if (!_hasClass(body, "disabled-onepage-scroll")) {
+  	  	event.preventDefault();
+  			moveUp(el);
+  		}
   	});
   	document.addEventListener("swipeUp", function(event){
-  		if (!_hasClass(body, "disabled-onepage-scroll")) event.preventDefault();
-  		moveDown(el);
+  		if (!_hasClass(body, "disabled-onepage-scroll")) {
+  			event.preventDefault();
+  			moveDown(el);
+  		}
   	});
     
   	// Create Pagination and Display Them
@@ -388,12 +392,16 @@ module.exports = function onePageScroll(element, options) {
 
 			_swipeEvents(el);
 			document.addEventListener("swipeDown",  function(event){
-			  if (!_hasClass(body, "disabled-onepage-scroll")) event.preventDefault();
-				moveUp(el);
+			  if (!_hasClass(body, "disabled-onepage-scroll")) {
+			  	event.preventDefault();
+					moveUp(el);
+				}
 			});
 			document.addEventListener("swipeUp", function(event){
-				if (!_hasClass(body, "disabled-onepage-scroll")) event.preventDefault();
-				moveDown(el);
+				if (!_hasClass(body, "disabled-onepage-scroll")) {
+					event.preventDefault();
+					moveDown(el);
+				}
 			});
       
       document.addEventListener('mousewheel', _mouseWheelHandler);

@@ -4,7 +4,15 @@
 		{
 			"type": "video",
 			"src": "/video/portfolio/neildiamond.mp4",
-			"caption": "Screen captures of the main interfaces for the Neil Diamond website"
+			"caption": "Screen captures of the main interfaces for the Neil Diamond website",
+			"poster": "/img/portfolio/neildiamond/poster.png"
+		},
+		{
+			"type": "image",
+			"src": "/img/portfolio/neildiamond/2.jpg",
+			"caption": "visit the site",
+			"link": "http://christmasprayers.neildiamondtribute.com/",
+			"alt": "3 screenshots of smallscreen views of the site."
 		}
 	],
 	"overview": "A simple experience with a powerful message, this site allows users to share their Christmas prayers and tributes to loved ones. The site is a visual show piece, using animated accents throughout to gather and display almost one thousand messages from individuals across the United States.",

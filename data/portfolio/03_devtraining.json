@@ -3,15 +3,15 @@
 	"media": [
 		{
 			"type": "image",
-			"src": "/img/devtraining/preview.jpg",
-			"caption": "Visit \"Is this Website Broken?\"",
+			"src": "/img/portfolio/devtraining/1.jpg",
+			"caption": "find out if your website is broken",
 			"link": "http://isthiswebsitebroken.com/",
 			"alt": "Screenshot of the Is This Website Broken website"
 		},
 		{
 			"type": "image",
-			"src": "/img/devtraining/respond.jpg",
-			"caption": "Visit \"Respond.\"",
+			"src": "/img/portfolio/devtraining/2.jpg",
+			"caption": "get squishy on the Respond site",
 			"link": "http://ui.tmp.com/projects/respond/",
 			"alt": "Screenshot of the Respond training website"
 		}

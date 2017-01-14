@@ -3,8 +3,8 @@
 	"media": [
 		{
 			"type": "image",
-			"src": "/img/portfolio/plumcube/preview.gif",
-			"caption": "Visit the site",
+			"src": "/img/portfolio/plumcube/1.jpg",
+			"caption": "visit the site",
 			"link": "http://stephanieplumeri.net/plumlabs/plumcube/",
 			"alt": "Screencap of the plumcube demo interface"
 		}

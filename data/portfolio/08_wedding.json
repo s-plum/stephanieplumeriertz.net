@@ -3,10 +3,16 @@
 	"media": [
 		{
 			"type": "image",
-			"src": "/img/portfolio/wedding/preview.gif",
-			"caption": "Visit the site",
+			"src": "/img/portfolio/wedding/1.jpg",
+			"caption": "visit the site",
 			"link": "http://everythingisawesomewedding.com/",
 			"alt": "Animated screencap of CSS 3D fun"
+		},
+		{
+			"type": "video",
+			"src": "/video/portfolio/wedding.mp4",
+			"caption": "Screen capture of the site animation",
+			"poster": "/img/portfolio/wedding/poster.png"
 		}
 	],
 	"overview": "Simple yet effective LEGO-themed website for my LEGO-themed wedding. Be sure to click the Google+ link.",
