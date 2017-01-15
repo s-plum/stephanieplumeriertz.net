@@ -16,4 +16,4 @@ const supportsTransitions = () => {
 	return false;
 };
 
-module.exports = false;
+module.exports = supportsTransitions();
