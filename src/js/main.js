@@ -5,3 +5,4 @@ import './touch';
 import './gallery-content';
 import './menu';
 import './plumnom';
+import './dino';
