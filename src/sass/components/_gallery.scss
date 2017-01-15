@@ -239,3 +239,24 @@
 		transform: translate3d(100%,0,0);
 	}
 }
+
+.touch {
+	.gallery-content a {
+		&:hover, &:focus {
+			box-shadow: none;
+			transform: scale(1);
+		}
+	}
+
+	.gallery-open--code .gallery-content a {
+		&:hover, &:focus {
+			background: rgba(65, 22, 55, 0.18);
+		}
+	}
+
+	.gallery-open--confections .gallery-content a {
+		&:hover, &:focus {
+			background: rgba($nom, 0.3);
+		}
+	}
+}
