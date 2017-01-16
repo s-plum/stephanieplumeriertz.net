@@ -1,8 +1,8 @@
 import onePageScroll from './onepagescroll';
-import supportsTransitions from './supports-transitions';
+import supportsCss from './supports-css';
 
 //only use this if transitions are supported
-if (supportsTransitions) {
+if (supportsCss) {
 	//move the icon container out of the content scroller, if it exists
 	const plumnom = document.querySelector('#plumnom');
 

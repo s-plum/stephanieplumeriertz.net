@@ -1,7 +1,7 @@
-import supportsTransitions from './supports-transitions';
+import supportsCss from './supports-css';
 
 
-if (supportsTransitions) {
+if (supportsCss) {
 	const navLink = document.querySelector('#navlink');
 	const menuLinks = Array.prototype.slice.call(document.querySelectorAll('#menu a'));
 	let menuOpen = false;

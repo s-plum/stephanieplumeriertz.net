@@ -1,14 +1,14 @@
 require('es6-promise').polyfill();
 import 'fetch-ie8';
 import getParentSection from './get-parent-section';
-import supportsTransitions from './supports-transitions';
+import supportsCss from './supports-css';
 const slideSpeed = 500;
 const fadeSpeed = 300;
 
 /* =================================================
 Dynamic slide of gallery content if transitions are supported
 ================================================= */
-if (supportsTransitions) {
+if (supportsCss) {
 	/* =================================================
 	Move gallery content into parent container
 	================================================= */
