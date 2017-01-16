@@ -22,7 +22,7 @@ $icon-width-lg: 150px;
 		left: 50%;
 		perspective: 1000px;
 		transform-style: preserve-3d;
-		transform: rotateY(0) translate3d(0,-50%,0);
+		transform: rotateY(0) translate3d(0,-90%,0);
 		transition: width $animationSpeed ease, height $animationSpeed ease;
 		top: 50%;
 		width: $icon-width;
@@ -30,11 +30,13 @@ $icon-width-lg: 150px;
 		@media (min-width: $start-md) {
 			height: $icon-height-md;
 			width: $icon-width-md;
+			transform: rotateY(0) translate3d(0,-75%,0);
 		}
 
 		@media (min-width: $start-lg) {
 			height: $icon-height-lg;
 			width: $icon-width-lg;
+			transform: rotateY(0) translate3d(0,-50%,0);
 		}
 	}
 
