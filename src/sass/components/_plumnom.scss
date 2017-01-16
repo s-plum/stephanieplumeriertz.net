@@ -187,7 +187,15 @@ $icon-width-lg: 150px;
 				width: $icon-width;
 
 				.plumnom-inner {
-					transform: translate3d(-50%,20%,0);
+					transform: translate3d(-$icon-width*0.5,$icon-width*0.2,0);
+
+					@media (min-width: $start-md) {
+						transform: translate3d(-$icon-width-md*0.5,$icon-width-md*0.2,0);
+					}
+
+					@media (min-width: $start-lg) {
+						transform: translate3d(-$icon-width-lg*0.4,$icon-width-lg*0.2,0);
+					}
 				}
 			}
 		}
@@ -199,7 +207,15 @@ $icon-width-lg: 150px;
 				width: $icon-width*1.5;
 
 				.plumnom-inner {
-					transform: translate3d(50%,0,0);
+					transform: translate3d($icon-width*0.5,0,0);
+
+					@media (min-width: $start-md) {
+						transform: translate3d(-$icon-width-md*0.5,0,0);
+					}
+
+					@media (min-width: $start-lg) {
+						transform: translate3d(-$icon-width-lg*0.5,0,0);
+					}
 				}
 			}
 		}
