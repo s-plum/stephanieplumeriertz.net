@@ -137,7 +137,7 @@ $icon-width-lg: 150px;
 				}
 
 				.plumnom-inner {
-					transform: translate3d(-$icon-width/2,0,0);
+					transform: translate3d(-$icon-width*0.75,0,0);
 					transition: none;
 
 					@media (min-width: $start-md) {
@@ -145,7 +145,7 @@ $icon-width-lg: 150px;
 					}
 
 					@media (min-width: $start-lg) {
-						transform: translate3d(-$icon-width-lg/2,0,0);
+						transform: translate3d(-$icon-width-lg*0.4,0,0);
 					}
 				}
 			}
@@ -207,14 +207,14 @@ $icon-width-lg: 150px;
 				width: $icon-width*1.5;
 
 				.plumnom-inner {
-					transform: translate3d($icon-width*0.5,0,0);
+					transform: translate3d($icon-width*0.75,0,0);
 
 					@media (min-width: $start-md) {
-						transform: translate3d(-$icon-width-md*0.5,0,0);
+						transform: translate3d($icon-width-md*0.5,0,0);
 					}
 
 					@media (min-width: $start-lg) {
-						transform: translate3d(-$icon-width-lg*0.5,0,0);
+						transform: translate3d($icon-width-lg*0.35,0,0);
 					}
 				}
 			}

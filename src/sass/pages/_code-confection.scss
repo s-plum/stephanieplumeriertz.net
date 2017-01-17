@@ -2,6 +2,19 @@
 	&:not(.gallery-section-inner) {
 		h2 {
 			margin-top: 2.5em;
+			position: relative;
+
+			&:before {
+				background: url("/img/plumnom.svg") no-repeat left center / auto 100%;
+				content: "";
+				display: block;
+				height: 120px;
+				left: 50%;
+				margin-left: -56px;
+				position: absolute;
+				top: -136px;
+				width: 112.5px;
+			}
 		}
 	}
 
@@ -37,6 +50,10 @@
 #confections .section-inner:not(.gallery-section-inner) {
 	h2 {
 		margin-top: 1.5em;
+
+		&:before {
+			background-position: right center;
+		}
 	}
 
 	.cta {
@@ -48,5 +65,11 @@
 			background: darken($nom, 7%);
 			color: $chocolate;
 		}
+	}
+}
+
+.js #code .section-inner h2, .js #confections .section-inner h2 { 
+	&:before {
+		display: none;
 	}
 }
