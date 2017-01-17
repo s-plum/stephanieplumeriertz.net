@@ -21,7 +21,8 @@
 			"src": "/video/noms/greatpumpkin.mp4",
 			"caption": "",
 			"loop": true,
-			"autoplay": true
+			"autoplay": true,
+			"poster": "/img/noms/greatpumpkin/poster.png"
 		},
 		{
 			"type": "image",
