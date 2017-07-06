@@ -1,6 +1,6 @@
 .icon {
 	background: url("/img/icons.svg") no-repeat;
-	background-size: 400% auto;
+	background-size: 500% auto;
 	display: inline-block;
 	height: 50px;
 	overflow: hidden;
@@ -25,16 +25,21 @@
 
 	&--linkedin {
 		background-color: #007bb6;
-		background-position: 33.333% center;
+		background-position: 25% center;
 	}
 
 	&--twitter {
 		background-color: #429cd6;
-		background-position: 66.66667% center;
+		background-position: 50% center;
 	}
 
 	&--download {
 		background-color: #b39bca;
+		background-position: 75% center;
+	}
+
+	&--instagram {
+		background-color: #da3075;
 		background-position: right center;
 	}
 }
