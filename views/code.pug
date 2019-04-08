@@ -11,7 +11,7 @@ block content
 							li
 								if media.type == 'image'
 									if media.link
-										a.preview-media-item(href=media.link,target="_blank")
+										a.preview-media-item(href=media.link)
 											img(src=media.src, alt=media.alt || media.caption)
 											span.preview-media-caption
 												.text= media.caption
@@ -21,12 +21,13 @@ block content
 
 								else
 									.preview-media-item
-										video(src=media.src, autoplay=true, loop=true)
+										video(src=media.src, autoplay=true, loop=true, controls=true, title=media.caption)
+
 										
 				.info
 					.info-section
 						h2 Overview
-						p!= project.overview
+						div!= project.overview
 
 					.info-section
 						h2 Contributions

@@ -24,7 +24,7 @@ $icon-width-lg: 150px;
 		transform-style: preserve-3d;
 		transform: rotateY(0) translate3d(0,-90%,0);
 		transition: width $animationSpeed ease, height $animationSpeed ease;
-		top: 50%;
+		top: 50vh;
 		width: $icon-width;
 
 		@media (min-width: $start-md) {
@@ -90,7 +90,7 @@ $icon-width-lg: 150px;
 	height: $icon-height;
 	position: fixed;
 	margin-top: -34px;
-	top: 50%;
+	top: 50vh;
 	transform: translate3d(0,-$icon-height/2,0);
 	z-index: 3;
 

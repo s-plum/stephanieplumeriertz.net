@@ -1,15 +1,16 @@
 {
-	"title": "Nomsmas 2016",
+	"title": "Nomsmas 2018",
+  	"thumbnail_alt": "Piles of white sugar cookies with red and green sprinkles.",
 	"media": [
 		{
 			"type": "image",
 			"src": "/img/noms/nomsmas/1.jpg",
-			"caption": "Full spread of all baked goods."
+			"caption": "Piles of white sugar cookies with red and green sprinkles."
 		},
 		{
 			"type": "image",
 			"src": "/img/noms/nomsmas/2.jpg",
-			"caption": "Snickerdoodles cooling on a baking tray."
+			"caption": "Stacks of peanut butter kiss cookies."
 		},
 		{
 			"type": "image",
@@ -19,12 +20,12 @@
 		{
 			"type": "image",
 			"src": "/img/noms/nomsmas/4.jpg",
-			"caption": "Peanut butter cookies cooling on a rack."
+			"caption": "Chocolate-dipped peanut butter balls with red and green nonpareils."
 		},
 		{
 			"type": "image",
 			"src": "/img/noms/nomsmas/5.jpg",
-			"caption": "Chocolate chip cookies."
+			"caption": "Chocolate chip cookies cooling on a rack."
 		},
 		{
 			"type": "image",
@@ -33,5 +34,5 @@
 		}
 		
 	],
-	"overview": "100 dozen Christmas treats, in 12 different forms: <br/><br/><ul><li>Chocolate-dipped peanut butter balls</li><li>Red velvet cookies</li><li>Chocolate chip cookies</li><li>Chocolate-dipped chocolate chip shortbreads</li><li>Snickerdoodles</li><li>Sugar cutouts</li><li>Death by chocolate cookies</li><li>Cocoa cookies</li><li>Ginger cookies</li><li>Peanut butter cookies.</li></ul><br/>Oh, and five pounds of fudge. <br/><br/>A typical holiday weekend's worth of baking."
+	"overview": "1,959 Christmas treats, in 11 different forms: <br/><br/><ul><li>Chocolate-dipped peanut butter balls</li><li>Red velvet cookies</li><li>Chocolate chip cookies</li><li>Chocolate-dipped chocolate chip shortbreads</li><li>Snickerdoodles</li><li>Sugar cutouts</li><li>Death by chocolate cookies</li><li>Cocoa cookies</li><li>Ginger cookies</li><li>Peanut butter kiss cookies</li><li>Oatmeal M&M cookies</li></ul><br/>Oh, and 11 pounds of fudge and peppermint bark. <br/><br/>A typical holiday weekend's worth of baking."
 }

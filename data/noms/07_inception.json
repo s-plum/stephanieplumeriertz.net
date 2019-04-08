@@ -1,15 +1,16 @@
 {
 	"title": "Inception Brownies",
+  	"thumbnail_alt": "Close-up of the top of brownies covered with Nutella and sprinkles.",
 	"media": [
 		{
 			"type": "image",
 			"src": "/img/noms/inception/1.jpg",
-			"caption": "View of Final Form Inception Brownies."
+			"caption": "Three thick layers of alternating dark and light cake covered with Nutella and sprinkles."
 		},
 		{
 			"type": "video",
 			"src": "/video/noms/inception1.mp4",
-			"caption": "",
+			"caption": "Inception Brownies video, in the style of an Inception movie trailer.",
 			"loop": false,
 			"autoplay": false,
 			"controls": true,

@@ -1,20 +1,21 @@
 {
 	"title": "Coin Block Cake",
+  	"thumbnail_alt": "Cake shaped like a yellow question mark block from Super Mario.",
 	"media": [
 		{
 			"type": "image",
 			"src": "/img/noms/coinblock/1.jpg",
-			"caption": "View of the entire cake."
+			"caption": "Cake shaped like a yellow question mark block from Super Mario."
 		},
 		{
 			"type": "image",
 			"src": "/img/noms/coinblock/2.jpg",
-			"caption": "Unfrosted cake in progress."
+			"caption": "Unfrosted square cake layers with a square cutout in the middle."
 		},
 		{
 			"type": "image",
 			"src": "/img/noms/coinblock/3.jpg",
-			"caption": "Finished cake with coins spilling out from the inside."
+			"caption": "Cube-shaped cake with a slice cut out and coins spilling out from the inside."
 		}
 	],
 	"overview": "Moist yellow cake with vanilla buttercream frosting, filled with chocolate coins and styled with fondant as an iconic Mario coin block."

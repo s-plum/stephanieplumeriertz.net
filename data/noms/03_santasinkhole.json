@@ -1,0 +1,32 @@
+{
+	"title": "Santa's Sinkhole",
+  	"thumbnail_alt": "Gingerbread house on top of a giant cake covered with stripes of red and green M&Ms.",
+	"media": [
+		{
+			"type": "video",
+			"src": "/video/noms/santasinkhole.mp4",
+			"caption": "",
+			"loop": true,
+			"autoplay": true,
+		  	"controls": true,
+			"poster": "/img/noms/santasinkhole/poster.png"
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/santasinkhole/2.jpg",
+			"caption": "Giant cake with a single slice cut from it."
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/santasinkhole/3.jpg",
+			"caption": "Tall slice of six-layer cake."
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/santasinkhole/1.jpg",
+			"caption": "Gingerbread house on top of a giant cake covered with stripes of red and green M&Ms."
+		}
+		
+	],
+	"overview": "Six alternating layers of red-dyed chocolate and green-dyed white cake, carved out and stuffed with chocolate chip cookies and M&M's. Frosted and filled with vanilla buttercream, and topped with a layer of precision-aligned M&M's and an entire gingerbread house."
+}

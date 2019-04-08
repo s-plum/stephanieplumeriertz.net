@@ -1,0 +1,37 @@
+{
+	"title": "UI Training Materials",
+	"thumbnail": "/img/portfolio/devtraining/thumb.png",
+  	"thumbnail_alt": "Fuel gauge with red, orange, yellow, and green sections.",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/portfolio/devtraining/1.jpg",
+			"caption": "Find out if your website is broken",
+			"link": "http://isthiswebsitebroken.com/",
+			"alt": "Screenshot of the Is This Website Broken website"
+		},
+		{
+			"type": "image",
+			"src": "/img/portfolio/devtraining/2.jpg",
+			"caption": "Get squishy on the Respond site",
+			"link": "http://ui.tmp.com/projects/respond/",
+			"alt": "Screenshot of the Respond training website"
+		},
+	  	{
+		  	"type": "image",
+		  	"src": "/img/portfolio/devtraining/3.jpg",
+		  	"caption": "Get your learn on with the RWD School of Rock!",
+		  	"link": "https://tmpworldwide.github.io/uid/rwd-school-of-rock/",
+		  	"alt": "RWD School of Rock! logo"
+		}
+	],
+	"overview": "Sometimes I build things, and other times I build things to teach others about best practices for building things.<br/><br/><ul><li><b>\"Is This Website Broken\"</b> was built to promote the importance of content accessibility.</li><li><b>\"Respond\"</b> was used as part of a series of presentations on the benefits and challenges of responsive design.</li><li><b>\"RWD School of Rock!\"</b> was a training program aimed at helping designers and quality assurance engineers get on the same page about responsive design as more clients began requesting responsive sites.</li></ul>",
+	"work": [
+	  	"Presentation content",
+	  	"UI development",
+		"Fanatic devotion to web standards"
+	],
+	"stack": [
+		"Good ol' HTML, CSS, and Javascript"
+	]
+}

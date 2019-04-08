@@ -12,7 +12,7 @@ block content
 							li
 								.preview-media-item
 									if media.type == 'video'
-										video(src=media.src, autoplay=media.autoplay, loop=media.loop, controls=media.controls, poster=media.poster)
+										video(src=media.src, autoplay=media.autoplay, loop=media.loop, controls=media.controls, poster=media.poster, muted=true)
 									else
 										img(src=media.src, alt=media.alt || media.caption)
 

@@ -1,0 +1,35 @@
+{
+	"title": "Genome Company Website",
+	"thumbnail": "/img/portfolio/genome/thumb.png",
+  	"thumbnail_alt": "Genome company logo: Green DNA on a black background.",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/portfolio/genome/1.jpg",
+			"caption": "Visit the site",
+			"link": "https://geno.me",
+			"alt": "Genome corporate website homepage"
+		},
+		{
+			"type": "image",
+			"src": "/img/portfolio/genome/2.png",
+			"caption": "Genome corporate website team listing"
+		}
+	],
+	"overview": "The face of the Genome digital innovation agency was crafted with performance, small-screen-friendliness, and just the right amount of \"swoosh\". Maintenance was also a major consideration: after initial development, all members of the team (technical or otherwise) were able to add new project case studies and past client information without touching code.",
+	"work": [
+		"UI development",
+		"Data architecture",
+		"Server development",
+		"UI design advisory",
+		"Deployment and server management"
+	],
+	"stack": [
+		"VanillaJS UI Framework",
+		"Jade (now Pug)",
+		"KeystoneJS",
+		"Node.js",
+		"Express",
+		"MongoDB"
+	]
+}

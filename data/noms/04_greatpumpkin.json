@@ -1,0 +1,35 @@
+{
+	"title": "The Great Pumpkin",
+  	"thumbnail_alt": "Close-up of the top of an orange pumpkin cake with a green stem made from rice cereal.",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/noms/greatpumpkin/1.jpg",
+			"caption": "Close-up of the top of an orange pumpkin cake with a green stem made from rice cereal."
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/greatpumpkin/2.jpg",
+			"caption": "Large cake decorated to look like a pumpkin, with small banana shown for scale."
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/greatpumpkin/3.jpg",
+			"caption": "Assorted cake ingredients: pumpkin spice chocolate chips and pumpkin spice Kisses."
+		},
+		{
+			"type": "video",
+			"src": "/video/noms/greatpumpkin.mp4",
+			"caption": "Time-lapse of the cake construction and decoration.",
+			"loop": true,
+			"autoplay": true,
+			"poster": "/img/noms/greatpumpkin/poster.png"
+		},
+		{
+			"type": "image",
+			"src": "/img/noms/greatpumpkin/5.jpg",
+			"caption": "Tall slice of a three-layer cake with very thick layers."
+		}
+	],
+	"overview": "Three layers of pumpkin spice everything: Pumpkin spice Pop-Tarts baked into pumpkin brownies, pumpkin pie baked into pumpkin cake, and pumpkin cheesecake brownies, filled and frosted with pumpkin frosting. Garnished with pumpkin spice Hershey Kisses, pumpkin spice baking chips, and a Rice Krispie stem."
+}

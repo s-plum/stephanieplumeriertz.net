@@ -1,0 +1,33 @@
+{
+  "title": "Instagabby",
+  "thumbnail": "/img/portfolio/instagabby/thumb.png",
+  "thumbnail_alt": "Instagram logo knockoff",
+  "media": [
+	{
+	  "type": "image",
+	  "src": "/img/portfolio/instagabby/1.png",
+	  "caption": "Visit the site",
+	  "link": "http://instagabby.com",
+	  "alt": "Website homepage with camera and link icons"
+	},
+	{
+	  "type": "video",
+	  "src": "/video/portfolio/instagabby1.mp4",
+	  "caption": "Screen capture of a photo of a girl giving a thumbs up superimposed on a loaf of bread",
+	  "poster": "/img/portfolio/instagabby/poster1.png"
+	}
+  ],
+  "overview": "Workflow optimization of an inside joke involving adding a picture of my friend Gabby into other pictures.",
+  "work": [
+	"UI/UX design",
+	"Logo \"design\"",
+	"Server development",
+	"UI development"
+  ],
+  "stack": [
+	"Node.js",
+	"Express",
+	"Redux",
+	"AngularJS"
+  ]
+}

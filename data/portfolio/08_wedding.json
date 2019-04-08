@@ -1,18 +1,19 @@
 {
 	"title": "Everything Is Awesome",
 	"thumbnail": "/img/portfolio/wedding/thumb.png",
+  	"thumbnail_alt": "Male and female LEGO people on the homepage of the website.",
 	"media": [
 		{
 			"type": "image",
 			"src": "/img/portfolio/wedding/1.jpg",
-			"caption": "visit the site",
+			"caption": "Visit the site",
 			"link": "http://everythingisawesomewedding.com/",
-			"alt": "Animated screencap of CSS 3D fun"
+			"alt": "Male and female LEGO people on the homepage of the website"
 		},
 		{
 			"type": "video",
 			"src": "/video/portfolio/wedding.mp4",
-			"caption": "Screen capture of the site animation",
+			"caption": "Screen capture of the site 3D block animation",
 			"poster": "/img/portfolio/wedding/poster.png"
 		}
 	],

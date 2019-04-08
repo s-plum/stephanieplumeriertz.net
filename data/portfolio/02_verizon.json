@@ -1,6 +1,7 @@
 {
 	"title": "Verizon Activations Manager",
 	"thumbnail": "/img/portfolio/verizon/thumb.jpg",
+  	"thumbnail_alt": "Verizon tagline: \"Better Matters\"",
 	"media": [
 		{
 			"type": "video",
@@ -9,15 +10,17 @@
 			"poster": "/img/portfolio/verizon/poster1.png"
 		},
 		{
-			"type": "image",
-			"src": "/img/portfolio/verizon/2.png",
-			"caption": "Screenshots of the event creation workflow on small and large screens."
-		},
-		{
 			"type": "video",
 			"src": "/video/portfolio/verizon2.mp4",
 			"caption": "Screen capture of a touch screen game interface.",
 			"poster": "/img/portfolio/verizon/poster2.png"
+		},
+		{
+			"type": "image",
+			"src": "/img/portfolio/verizon/3.jpg",
+			"caption": "See the event in action",
+			"link": "https://photos.google.com/share/AF1QipMgf42VUDUCO01QzTY4BlyLjJpuOpAvyTXxSHiczUTZpk-Bkg-15Zj_I--ooOmpAw?key=aFM5UHduN3NhWGhkUWN1bGdnUmxnLVRtZmhsWWV3",
+			"alt": "Three participants in front of a screen at a live Verizon event."
 		}
 	],
 	"overview": "Initially developed for text-to-win promotions in NFL stadiums, this system evolved over the course of a year to manage 10 different contest types at almost 200 Verizon-sponsored events. The application features a permission structure with eight different user levels, and a UI to support the specific workflows of each. In addition to standard CMS controls, the system also includes multiple game interface views developed for customer gameplay on large touch screens.",
@@ -25,7 +28,8 @@
 		"UI development",
 		"UI design advisory",
 		"Feature scoping",
-		"Deployment and server management"
+		"Deployment and server management",
+	  	"On-site installation and tech support"
 	],
 	"stack": [
 		"AngularJS (1.5)",

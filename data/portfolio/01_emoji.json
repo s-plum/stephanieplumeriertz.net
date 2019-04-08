@@ -1,0 +1,30 @@
+{
+  "title": "BuzzFeed News Live Emoji Reactions",
+  "thumbnail": "/img/portfolio/emoji/thumb.png",
+  "thumbnail_alt": "US flag, fingers crossed, and nervous emoji in a text message",
+  "media": [
+	{
+	  "type": "video",
+	  "src": "/video/portfolio/emoji1.mp4",
+	  "caption": "Screen capture of emoji sentiments changing over time in a circle pack chart",
+	  "poster": "/img/portfolio/emoji/poster1.png"
+	},
+	{
+	  "type": "video",
+	  "src": "/video/portfolio/emoji2.mp4",
+	  "caption": "Screen capture of emoji module live on the buzzfeednews.com home page",
+	  "poster": "/img/portfolio/emoji/poster2.png"
+	}
+  ],
+  "overview": "Collecting popular opinion on the 2018 Midterm Elections in real time, in the most BuzzFeed way possible: with emoji. <br/><br/>The unit featured a live reaction feed along with what may be the world's first (and in the name of good data visualization, hopefully last) \"time series emoji pack\" graph showing how sentiment changed as the election results came in during the evening.",
+  "work": [
+	"UI development",
+	"Accessibility updates",
+	"API design"
+  ],
+  "stack": [
+	"React",
+	"D3.js",
+	"Python/SQL"
+  ]
+}

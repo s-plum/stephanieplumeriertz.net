@@ -1,0 +1,26 @@
+{
+	"title": "Cookie Cake",
+  	"thumbnail_alt": "Small cookies covering the top of a cake.",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/noms/cookiecake/1.jpg",
+			"caption": "Completed cookie cake, shown with a banana for scale."
+		},
+	  	{
+		  "type": "video",
+		  "src": "/video/noms/cookiecake.mp4",
+		  "caption": "Time lapse of cake assembly.",
+		  "loop": true,
+		  "autoplay": true,
+		  "controls": true,
+		  "poster": "/img/noms/cookiecake/poster.png"
+		},
+		{
+		  "type": "image",
+		  "src": "/img/noms/cookiecake/2.jpg",
+		  "caption": "Very tall slice of completed six-layer cake."
+		}
+	],
+	"overview": "Six layers of cookie cake frosted and filled with chocolate frosting and covered with mini cookies. Mrs. Fields can't even."
+}

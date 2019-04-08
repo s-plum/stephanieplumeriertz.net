@@ -1,6 +1,7 @@
 {
 	"title": "Neil Diamond's Christmas Prayers",
 	"thumbnail": "/img/portfolio/neildiamond/thumb.jpg",
+  	"thumbnail_alt": "Candle icon on a starry background.",
 	"media": [
 		{
 			"type": "video",
@@ -11,8 +12,6 @@
 		{
 			"type": "image",
 			"src": "/img/portfolio/neildiamond/2.jpg",
-			"caption": "visit the site",
-			"link": "http://christmasprayers.neildiamondtribute.com/",
 			"alt": "3 screenshots of smallscreen views of the site."
 		}
 	],

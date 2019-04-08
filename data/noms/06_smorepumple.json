@@ -1,15 +1,16 @@
 {
 	"title": "The S'morepumple",
+  	"thumbnail_alt": "Top of a cake covered with chocolate, mini marshmallows, and graham crackers.",
 	"media": [
 		{
 			"type": "image",
 			"src": "/img/noms/smorepumple/1.jpg",
-			"caption": "View of the entire cake."
+			"caption": "Tall cake covered with chocolate, mini marshmallows, and graham crackers."
 		},
 		{
 			"type": "image",
 			"src": "/img/noms/smorepumple/2.jpg",
-			"caption": "Cross-section of the finished cake."
+			"caption": "Cross-section of cake: 3 layers of different cake flavors, each with a different flavor pie in it."
 		}
 	],
 	"overview": "A whole cherry pie baked into a white cake, topped with a whole pumpkin pie baked into a spice cake, topped with a whole apple pie baked into a yellow cake, filled and frosted with vanilla buttercream frosting, then finished with chocolate ganache, chocolate chunks, marshmallows, and graham crackers."

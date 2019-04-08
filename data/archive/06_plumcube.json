@@ -1,0 +1,23 @@
+{
+	"title": "Plumcube",
+	"thumbnail": "/img/portfolio/plumcube/thumb.jpg",
+	"media": [
+		{
+			"type": "image",
+			"src": "/img/portfolio/plumcube/1.jpg",
+			"caption": "visit the site",
+			"link": "http://stephanieplumeri.net/plumlabs/plumcube/",
+			"alt": "Screencap of the plumcube demo interface"
+		}
+	],
+	"overview": "A Compass extension for creating 3D cubes with Sass/CSS, built because it's hip to be square (and to learn some Sass tricks). The code used on the demo page to style the cube is available as a <a href=\"https://rubygems.org/gems/plumcube\">published gem</a> that has been downloaded over 7,000 times. See the <a href=\"https://github.com/s-plum/plumcube\">GitHub documentation</a> for full installation instructions.",
+	"work": [
+		"UI design",
+		"UI development"
+	],
+	"stack": [
+		"CSS",
+		"VanillaJS",
+		"Ruby"
+	]
+}
